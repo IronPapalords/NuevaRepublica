@@ -1,3 +1,3 @@
 # Nueva Republica
 
-''En esta tierra fertil sembraremos la semilla de nuestro futuro.
+En esta tierra fertil sembramos la semilla de nuestro futuro.
