@@ -1,0 +1,15 @@
+com\ironpapalords\repository\UserRepository.class
+com\ironpapalords\repository\RoleRepository.class
+com\ironpapalords\model\AuthToken.class
+com\ironpapalords\model\UserDTO.class
+com\ironpapalords\service\RoleService.class
+com\ironpapalords\model\Role.class
+com\ironpapalords\service\impl\RoleServiceImpl.class
+com\ironpapalords\model\User.class
+com\ironpapalords\service\UserService.class
+com\ironpapalords\controller\UserController.class
+com\ironpapalords\model\LoginUser.class
+com\ironpapalords\service\impl\UserServiceImpl.class
+com\ironpapalords\controller\RoleController.class
+com\ironpapalords\AppLauncher.class
+com\ironpapalords\SwaggerConfig.class
