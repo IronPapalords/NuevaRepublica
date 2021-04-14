@@ -1,0 +1,29 @@
+
+<!-- <pre>{{toogleMenu}}</pre> -->
+<div [ngClass]="{'sticky-top': toogleMenu}" class="navbarProps">
+
+  <div class="row mx-2">
+    <div class="col-12">
+      <nav class="navbar navbar-expand w-100">
+        <!-- HAMBURGRUESA -->
+        <button (click)="toggleMenu()" class="btn btn-primary">
+          <i class="bi bi-list"></i>
+          <!-- <span class="navbar-toggler-icon"></span> -->
+        </button>
+        
+        <div class="navbar-collapse collapse justify-content-end">
+          <button class="btn btn-danger">
+            <i class="bi bi-arrow-right-circle"></i> 
+          </button>
+          <div class="d-xs-none mx-1 text-white">Salir</div>
+          <!-- <ul class="navbar-nav ">
+            <li> 
+                Salir
+            </li>
+          </ul> -->
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+</div>

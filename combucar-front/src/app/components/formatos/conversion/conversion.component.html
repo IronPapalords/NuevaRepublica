@@ -1,0 +1,236 @@
+<div class="container">
+
+    <div class="d-flex justify-content-around align-items-center mt-1">
+            <img src="./assets/brand/combucar.png" width="100" height="50" alt="logo">
+            <div class="titulo">FORMATO DE CONTROL DE CONVERSION</div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <form (ngSubmit)="guardar()" [formGroup]="conversionForm">
+                <div class="row ">
+                    <div class="d-flex justify-content-around">
+
+                        <label class="col-4 text-right col-form-label font-weight-light">No DE VIN</label>
+                        <div class="col">                        
+                            <input 
+                                type="text"
+                                class="form-control"
+                                formControlName="numerovin"
+                                maxlength="17"
+                                placeholder="Ingresar el numero vin"        
+                                />
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row text-center">
+                    <div class="col-6">
+                        <div class="seccion">INICIO DE CONVERSION</div>
+                    </div>
+                    <div class="col-6">
+                        <div class="seccion">INICIO DE CONVERSION</div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-6 border">CONVERSION MECANICA</div>
+                    <div class="col-6 border">CONVERSION CILINDROS</div>
+
+                    
+                    <div class="col-6"><span>TECNICO MECANICO</span></div>
+                    <div class="col-6"><span>TECNICO CILINDROS</span></div>
+
+                    <div class="row">
+                        <div class="col-6">
+
+                            <label class="w-100 col-form-label text-start">Mecánica:</label>
+                            <div class="col-sm-9">
+                                <input 
+                                    type="text"
+                                    class="form-control"
+                                    formControlName="mecanica"
+                                    placeholder="Mecanica"        
+                                    />
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-block">
+                                <label class="w-100 col-form-label text-start"><small>Linea y Frente:</small> </label>
+                                <input 
+                                    type="text"
+                                    class="form-control form-control-sm w-100"
+                                    formControlName="lineayfrente"
+                                    placeholder="Ingresar linea y frente"        
+                                    />
+                            </div>
+                            <div class="d-block">
+                                <label class="w-100 col-form-label text-start">Perforación:</label>
+                                <input 
+                                    type="text"
+                                    class="form-control form-control-sm"
+                                    formControlName="perforacion"
+                                    placeholder="Ingresar perforacion"        
+                                />
+                            </div>
+                            <div class="d-block">
+                                <label class="w-100 col-form-label text-start">Cilindros:</label>
+                                <input 
+                                    type="text"
+                                    class="form-control form-control-sm"
+                                    formControlName="cilindros"
+                                    placeholder="Ingresar cilindros"        
+                                    />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-6 border">
+                            REVISION
+                                <div class="row">
+                                    <div class="col"> Calibración </div>
+                                    <div class="col">
+                                        <div class="form-check form-switch">
+                                            <label class="form-check-label" for="flexRadioDefault1">Si</label>
+                                            <input class="form-check-input" formControlName="calibracion" type="checkbox" id="flexRadioDefault1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"> Anticongelante                                    </div>
+                                    <div class="col">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" formControlName="anticongelante" type="checkbox" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">Si</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"> Fugas de agua </div>
+                                    <div class="col">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" formControlName="fugasagua" type="checkbox" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">Si</label>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"> Herramienta </div>
+                                    <div class="col">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" formControlName="herramienta" type="checkbox" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">Si</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"> Limpieza </div>
+                                    <div class="col">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" formControlName="limpieza" type="checkbox" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">Si</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"> Funcionamiento </div>
+                                    <div class="col">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" formControlName="funcionamiento" type="checkbox" id="flexRadioDefault1">
+                                            <label class="form-check-label " for="flexRadioDefault1">Si</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"> Soporte de bateria </div>
+                                    <div class="col">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" formControlName="soporteBateria" type="checkbox" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">Si</label>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- CILINDROS -->
+                        <div class="col-6 border">
+                            REVISION
+                            <div class="row">
+                                <div class="col"> Instalacion </div>
+                                <div class="col">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" formControlName="instalacion" type="checkbox" id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">Si</label>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col"> Fugas de gas </div>
+                                <div class="col">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" formControlName="fugasGasCilindros" type="checkbox" id="flexRadioDefault1">
+                                        <label class="form-check-label " for="flexRadioDefault1">Si</label>
+                                    </div>                                    
+                                </div>
+                            </div>                       
+                            <div class="row">
+                                <div class="col"> Herramienta </div>
+                                <div class="col">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" formControlName="herramientaCilindros" type="checkbox" id="flexRadioDefault1">
+                                        <label class="form-check-label " for="flexRadioDefault1">Si</label>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col"> Limpieza  </div>
+                                <div class="col">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" formControlName="limpiezaCilindros" type="checkbox" id="flexRadioDefault1">
+                                        <label class="form-check-label " for="flexRadioDefault1">Si</label>
+                                    </div>                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col"> FIRMA DE SUPERVISOR
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="autorizaMecanica" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault"> Autoriza </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col"> FIRMA DE SUPERVISOR
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="autorizaCilindro" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault"> Autoriza </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary mt-5 float-end"
+                        [disabled]="conversionForm.invalid">
+                        Guardar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<h6>Formulario Valido</h6>
+<pre>{{ conversionForm.valid }}</pre>
+<h6>Valores Formulario Conversion</h6>
+<pre>{{ conversionForm.value | json }}</pre>
