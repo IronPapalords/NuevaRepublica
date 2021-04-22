@@ -1,1 +1,46 @@
-<p>operadores works!</p>
+<hr>
+<h4>Alta de Operadores </h4>
+<hr>
+
+<form>
+
+    <div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Nombre</label>
+            <div class="col-8">
+
+                <input class="form-control" type="text" placeholder="Nombre" formControlName="nombre">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Puesto</label>
+            <div class="col-8">
+                <select class="form-control" name="puesto" id="puesto">
+                    <option value="0">--Seleccione--</option>
+                    <option value="1">Operador Sr</option>
+                    <option value="2">Operador Jr</option>
+                    <option value="3">Mantenimiento</option>                    
+                  </select>
+                <!-- <input class="form-control" type="text" placeholder="Puesto" formControlName="puesto"> -->
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label">&nbsp;</label>
+        <div class="input-group col-md-8">
+            <button type="submit" class="btn btn-outline-primary btn-block">
+                Guardar
+            </button>
+        </div>
+    </div>
+
+</form>
+
+<!-- <h6>Catálogo Valido</h6>
+<pre>{{ catalogoOperadoresForm.valid }}</pre>
+<h6>Valores Catálogo Operadores</h6>
+<pre>{{ catalogoOperadoresForm.value | json }}</pre> -->

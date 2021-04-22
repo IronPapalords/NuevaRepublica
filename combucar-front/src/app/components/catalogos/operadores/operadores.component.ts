@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-operadores',
   templateUrl: './operadores.component.html',
-  styleUrls: ['./operadores.component.css']
+  styles: []
 })
+
 export class OperadoresComponent implements OnInit {
 
-  constructor() { }
+  // operadoresForm: FormGroup = this.fb.group({
+  //   nombre:[ '', Validators.required],
+  //   puesto:[ '', Validators.required ]
+  // })
 
+  constructor(  ) { }
+//private fb: FormBuilder 
   ngOnInit(): void {
+  }
+
+  guardar() { 
   }
 
 }
