@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./components/graficas/graficas.module').then( m => m.GraficasModule)
   },
   {
+    path: 'catalogos',
+    loadChildren: () => import('./components/catalogos/catalogos.module').then( m => m.CatalogosModule)
+  },
+  {
     path: 'formatos',
     loadChildren: () => import('./components/formatos/formatos.module').then(m => m.FormatosModule )
   },

@@ -19,7 +19,22 @@ export class SidebarMenuComponent  {
     {
       texto: 'Ventas',
       ruta: './graficas/barras'
-    }    
+    }
+  ];
+
+  catalogos: MenuItem[] = [
+    {
+      texto: 'Operadores',
+      ruta: './catalogos/operadores'
+    },
+    {
+      texto: 'Clientes',
+      ruta: './catalogos/clientes'
+    },
+    {
+      texto: 'Alta de Unidades',
+      ruta: './catalogos/altaUnidades'
+    }
   ];
 
   formatosMenu: MenuItem[] = [
