@@ -1,1 +1,639 @@
-<p>preconversion works!</p>
+<div class="container">
+
+    <div class="d-flex justify-content-around align-items-center mt-1">
+            <img src="./assets/brand/combucar.png" width="100" height="50" alt="logo">
+            <div class="titulo">FORMATO DE PRECONVERSION</div>
+    </div>
+
+    <form [formGroup]="preconversionForm" (ngsubmit)="guardarPreconversion()" >
+    
+        <div class="row">
+            <div class="col">
+                
+                <div class="row">
+                    <div class="col-3"> Fecha </div>
+                    <div class="col-3"> 
+                        <input type="date" formControlName="fechaActual" class="form-control" placeholder="Fecha Actual"> 
+                    </div>
+
+                    <div class="col"> 
+                        
+                        <div class="row">
+                            <div class="col"> Hora entrada </div>
+                            <div class="col"> 
+                                <input type="datetime-local" class="form-control" formControlName="horaentrada" maxlength="17"  placeholder="Hora entrada" />                                    
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col"> Hora termino </div>
+                                <div class="col"> 
+                                    <input type="datetime-local" class="form-control" formControlName="horatermino" maxlength="17" placeholder="Hora termino" />
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-3"> Taller </div>
+                    <div class="col-3"> 
+                        <input type="text" class="form-control" formControlName="taller" maxlength="17" placeholder="Nombre Taller" [class.is-invalid]="preconversionForm.controls.errors" />
+                        <span class="form-text text-danger" *ngIf="campoEsValido('taller')" > 
+                            Debe de ser de 3 letras
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+        <div class="row">
+            <div class="col">
+                
+                <!-- Informacion Cliente -->
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-12 text-center"> <h5>Informacion Cliente</h5> </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">Nombre</div>
+                                    <div class="col">  
+                                        <input type="text" class="form-control" formControlName="nombreCliente" maxlength="17" placeholder="Nombre" /> 
+                                        <span class="form-text text-danger" *ngIf="campoEsValido('nombreCliente')" > Debe ingresar nombre </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">Teléfono</div>
+                                    <div class="col">  
+                                        <input type="text" class="form-control" formControlName="telefonoCliente" maxlength="17" placeholder="Teléfono" /> 
+                                        <span class="form-text text-danger" *ngIf="campoEsValido('telefonoCliente')" > Debe ingresar Teléfono </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">Vendedor</div>
+                                    <div class="col">  
+                                        <input type="text" class="form-control" formControlName="vendedor" maxlength="17" placeholder="Vendedor" />  
+                                        <span class="form-text text-danger" *ngIf="campoEsValido('vendedor')" > Debe ingresar al Vendedor </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+
+                        <div class="row">
+                            <div class="col-12 text-center"> <h5> Información Vehiculo </h5></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">Marca</div>
+                            <div class="col">  
+                                <input 
+                                    type="text"
+                                    class="form-control"
+                                    formControlName="marca"
+                                    maxlength="17"
+                                    placeholder="Marca" 
+                                />  
+                            </div>
+                            <div class="col">  Ruta </div>
+                            <div class="col">  
+                                <input 
+                                    type="text"
+                                    class="form-control"
+                                    formControlName="ruta"
+                                    maxlength="17"
+                                    placeholder="Ruta" 
+                                />  
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">  Tipo  </div>
+                            <div class="col">  
+                                <input 
+                                    type="text" class="form-control" formControlName="tipo" maxlength="17" placeholder="Tipo" />  
+                            </div>
+                            <div class="col">  Placa  </div>
+                            <div class="col">  
+                                <input type="text" class="form-control" formControlName="placa" maxlength="8" placeholder="Placa" />  
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">  Año  </div>
+                            <div class="col">  
+                                <input 
+                                    type="text"
+                                    class="form-control"
+                                    formControlName="anio"
+                                    maxlength="17"
+                                    placeholder="Año" 
+                                />  
+                            </div>
+                            <div class="col">  CARB/SPI  </div>
+                            <div class="col">  
+                                <input 
+                                    type="text"
+                                    class="form-control"
+                                    formControlName="carbspi"
+                                    maxlength="17"
+                                    placeholder="CARB / SPI" 
+                                />  
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">  No ECO  </div>
+                            <div class="col">  
+                                <input 
+                                    type="text"
+                                    class="form-control"
+                                    formControlName="eco"
+                                    maxlength="17"
+                                    placeholder="ECO" 
+                                />  
+                            </div>
+                            <div class="col">  MPFI  </div>
+                            <div class="col">  
+                                <input 
+                                    type="text"
+                                    class="form-control"
+                                    formControlName="mpfi"
+                                    maxlength="17"
+                                    placeholder="mpfi" 
+                                />  
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="text-center">
+                    <h5>Inspección visual preliminar</h5>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                            <div class="row row-cols-4">
+                                <div class="col-4 border text-center"> ESTADO VISUAL </div>
+                                <div class="col-6 border text-center"> CAUSA / REVISION </div>
+                                <div class="col-1 border text-center"> B </div>
+                                <div class="col-1 border text-center"> M </div>
+                           
+                                <div class="col-4 border"> Lorem ipsum dolor sit </div>
+                                <div class="col-6 border"> Lorem ipsum dolor sit amet. </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio1" id="flexRadioDefault1">
+                                    </div>  
+                                </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center">  
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio2" id="flexRadioDefault1">
+                                    </div>
+                                </div>
+
+                                <div class="col-4 border"> Lorem ipsum dolor sit </div>
+                                <div class="col-6 border"> Lorem ipsum dolor sit amet. </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio3" id="flexRadioDefault3">
+                                    </div>  
+                                </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center">  
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio3" id="flexRadioDefault3">
+                                    </div>
+                                </div>
+
+                                <div class="col-4 border"> Lorem ipsum dolor sit </div>
+                                <div class="col-6 border"> Lorem ipsum dolor sit amet. </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio3" id="flexRadioDefault1">
+                                    </div>  
+                                </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center">  
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio3" id="flexRadioDefault1">
+                                    </div>
+                                </div>
+
+                                <div class="col-4 border"> Lorem ipsum dolor sit </div>
+                                <div class="col-6 border"> Lorem ipsum dolor sit amet. </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio4" id="flexRadioDefault1">
+                                    </div>  
+                                </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center">  
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio4" id="flexRadioDefault1">
+                                    </div>
+                                </div>
+
+                                <div class="col-4 border"> Lorem ipsum dolor sit </div>
+                                <div class="col-6 border"> Lorem ipsum dolor sit amet. </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio5" id="flexRadioDefault1">
+                                    </div>  
+                                </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center">  
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio5" id="flexRadioDefault1">
+                                    </div>
+                                </div>
+
+                                <div class="col-4 border"> Lorem ipsum dolor sit </div>
+                                <div class="col-6 border"> Lorem ipsum dolor sit amet. </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio6" id="flexRadioDefault1">
+                                    </div>  
+                                </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center">  
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio6" id="flexRadioDefault1">
+                                    </div>
+                                </div>
+
+                                <div class="col-4 border"> Lorem ipsum dolor sit </div>
+                                <div class="col-6 border"> Lorem ipsum dolor sit amet. </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio7" id="flexRadioDefault1">
+                                    </div>  
+                                </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center">  
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio7" id="flexRadioDefault1">
+                                    </div>
+                                </div>
+
+                                <div class="col-4 border"> Lorem ipsum dolor sit </div>
+                                <div class="col-6 border"> Lorem ipsum dolor sit amet. </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio8" id="flexRadioDefault1">
+                                    </div>  
+                                </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center">  
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio8" id="flexRadioDefault1">
+                                    </div>
+                                </div>
+
+                                <div class="col-4 border"> Lorem ipsum dolor sit </div>
+                                <div class="col-6 border"> Lorem ipsum dolor sit amet. </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio9" id="flexRadioDefault1">
+                                    </div>  
+                                </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center">  
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio9" id="flexRadioDefault1">
+                                    </div>
+                                </div>
+
+                                <div class="col-4 border"> Lorem ipsum dolor sit </div>
+                                <div class="col-6 border"> Lorem ipsum dolor sit amet. </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio10" id="flexRadioDefault1">
+                                    </div>  
+                                </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center">  
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio10" id="flexRadioDefault1">
+                                    </div>
+                                </div>
+
+                                <div class="col-4 border"> Lorem ipsum dolor sit </div>
+                                <div class="col-6 border"> Lorem ipsum dolor sit amet. </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio11" id="flexRadioDefault1">
+                                    </div>  
+                                </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center">  
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio11" id="flexRadioDefault1">
+                                    </div>
+                                </div>
+
+                                <div class="col-4 border"> Lorem ipsum dolor sit </div>
+                                <div class="col-6 border"> Lorem ipsum dolor sit amet. </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio12" id="flexRadioDefault1">
+                                    </div>  
+                                </div>
+                                <div class="col-1 border d-flex justify-content-center align-items-center">  
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" formControlName="flexRadio12" id="flexRadioDefault1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-cols-2">
+                                <div class="col border"> Escanear ( Codigos de falta y funcionalidad de sensores ) </div>
+                                <div class="col border"> </div>
+                            </div>
+                            <div class="row row-cols-4">
+
+                                <div class="col border"> Check engine encendido </div>
+                                <div class="col border"> Si o no </div>
+                                <div class="col border"> </div>
+                                <div class="col border"> </div>
+                                
+                            </div>
+            </div>
+        <!-- </div>
+        <div class="row"> -->
+            <div class="d-xs-none col-md-1"></div>
+            <div class="col-sm-12 col-md-5">           
+                    <div class="row border">
+                        <div class="col-12 text-center"><h5>Estado del chasis y la suspensión</h5></div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col border">Estado</div>
+                        <div class="col border">Observacion</div>
+                        <div class="col border"></div>
+                        <div class="col border">B</div>
+                    </div>
+                    <div class="row">
+                        <div class="col border">Chasis o baúl.</div>
+                        <div class="col border">Lorem ipsum dolor sit amet.</div>
+                        <div class="col border"></div>
+                        <div class="col border"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border">Estado de suspensión</div>
+                        <div class="col border">Lorem ipsum dolor sit amet.</div>
+                        <div class="col border"></div>
+                        <div class="col border"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border-0"></div>
+                    </div>
+            <!--  </div>
+            <div class="col-sm-12 col-md-6 pl-1">  -->          
+                    <div class="row border">
+                        <div class="col-12 text-center"><h5>Analisis de gases ( Prueba a criterio del taller )</h5></div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col border">Monoxido de carbono (CO)</div>
+                        <div class="col border"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col border">Dioxido de carbono (CO<sup>2</sup> )</div>
+                        <div class="col border">Lorem ipsum dolor sit amet.</div>
+                    </div>
+                    <div class="row">
+                        <div class="col border">Hidrocarburos sin quemar (HC)</div>
+                        <div class="col border"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 border text-center"><h5>Sistema de refrigeraciòn</h5></div>
+                        <div class="col-3 border text-center">B</div>
+                        <div class="col-3 border text-center">M</div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-6 border">Fuga de agua</div>
+                        <div class="col-3 border"></div>
+                        <div class="col-3 border"></div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-6 border">Estado de mangueras del medidor</div>
+                        <div class="col-3 border"></div>
+                        <div class="col-3 border"></div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-6 border">Ventiladores</div>
+                        <div class="col-3 border"></div>
+                        <div class="col-3 border"></div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-6 border">Indicador de temperatura</div>
+                        <div class="col-3 border"></div>
+                        <div class="col-3 border"></div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-6 border">Enfocador</div>
+                        <div class="col-3 border"></div>
+                        <div class="col-3 border"></div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-6 border">Tanque recuperador de agua y liquido refrigerante</div>
+                        <div class="col-3 border"></div>
+                        <div class="col-3 border"></div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-6 border">Nivel de liquido refrigerante</div>
+                        <div class="col-3 border"></div>
+                        <div class="col-3 border"></div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-6 border">Tapa de radiador</div>
+                        <div class="col-3 border"></div>
+                        <div class="col-3 border"></div>
+                    </div>
+            </div>
+        </div>
+        
+        <hr />
+
+        <div class="text-center">
+            <h5>Estado Sistema Eléctrico</h5>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="row row-cols-4">
+                    <div class="col-4 border text-center"> Estado de bateria </div>
+                    <div class="col-3 border text-center"> Medición </div>
+                    <div class="col-3 border text-center"> Parametro </div>
+                    <div class="col-1 border text-center"> B </div>
+                    <div class="col-1 border text-center"> M </div>
+            
+                    <div class="col-4 border">  </div>
+                    <div class="col-3 border">  </div>
+                    <div class="col-3 border">  </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" formControlName="flexRadio1" id="flexRadioDefault1">
+                        </div>  
+                    </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center">  
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" formControlName="flexRadio1" id="flexRadioDefault1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- COLUMNA DE SEPARACION  -->
+            <div class="d-xs-none col-md-1"></div>
+
+            <div class="col-sm-12 col-md-5">
+                <div class="row row-cols-4">
+                    <div class="col-4 border text-center"> Estado Motor de arranque </div>
+                    <div class="col-3 border text-center"> Medición </div>
+                    <div class="col-3 border text-center"> Parametro </div>
+                    <div class="col-1 border text-center"> B </div>
+                    <div class="col-1 border text-center"> M </div>
+            
+                    <div class="col-4 border">Integridad de arranque </div>
+                    <div class="col-3 border">  </div>
+                    <div class="col-3 border">Ver  ?? 1.1  </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" formControlName="flexRadio1" id="flexRadioDefault1">
+                        </div>  
+                    </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center">  
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" formControlName="flexRadio1" id="flexRadioDefault1">
+                        </div>
+                    </div>
+
+                    <div class="col-4 border">Estado de arranque </div>
+                    <div class="col-3 border">  </div>
+                    <div class="col-3 border">  </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" formControlName="flexRadio1" id="flexRadioDefault1">
+                        </div>  
+                    </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center">  
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" formControlName="flexRadio1" id="flexRadioDefault1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row"><div class="col-12">&nbsp;</div></div>
+
+                <div class="row row-cols-4">
+                    <div class="col-4 border text-center"> Sistema de carga </div>
+                    <div class="col-3 border text-center"> Medición </div>
+                    <div class="col-3 border text-center"> Parametro </div>
+                    <div class="col-1 border text-center"> B </div>
+                    <div class="col-1 border text-center"> M </div>
+            
+                    <div class="col-4 border">Tensión de carga ?? </div>
+                    <div class="col-3 border">  </div>
+                    <div class="col-3 border">13.5 - 14.7v  </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" formControlName="flexRadio1" id="flexRadioDefault1">
+                        </div>  
+                    </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center">  
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" formControlName="flexRadio1" id="flexRadioDefault1">
+                        </div>
+                    </div>
+
+                    <div class="col-4 border">Tensión de carga ??</div>
+                    <div class="col-3 border">  </div>
+                    <div class="col-3 border">13.5 - 14.7v</div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" formControlName="flexRadio1" id="flexRadioDefault1">
+                        </div>  
+                    </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center">  
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" formControlName="flexRadio1" id="flexRadioDefault1">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row"><div class="col-12">&nbsp;</div></div>
+
+                <div class="row row-cols-2">
+                    <div class="col-6 border text-center">Cilindro 1.1</div>
+                    <div class="col-6 border text-center">Intensidad ?? </div>
+
+                    <div class="col-6 border">Motor 3 cilindros </div>
+                    <div class="col-6 border">80-100 amp  </div>
+
+                    <div class="col-6 border">Motor 4 cilindros </div>
+                    <div class="col-6 border">130-160 amp  </div>
+
+                    <div class="col-6 border">Motor 6 cilindros </div>
+                    <div class="col-6 border">180-200 amp</div>
+
+                    <div class="col-6 border">Motor 8 cilindros </div>
+                    <div class="col-6 border">230-250 amp</div>                    
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text-center">
+            <h5>Diagnóstico sistema de Encendido/Inyección</h5>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="row row-cols-4">
+                    <div class="col-4 border text-center"> Sis. de alta tensión </div>
+                    <div class="col-3 border text-center"> Medición </div>
+                    <div class="col-3 border text-center"> Parametro </div>
+                    <div class="col-1 border text-center"> B </div>
+                    <div class="col-1 border text-center"> M </div>
+            
+                    <div class="col-4 border">  </div>
+                    <div class="col-3 border"> Lorem ipsum dolor sit. </div>
+                    <div class="col-3 border"> Lorem ipsum dolor sit. </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" formControlName="flexRadio1" id="flexRadioDefault1">
+                        </div>  
+                    </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center">  
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" formControlName="flexRadio1" id="flexRadioDefault1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-cols-4">
+                    <div class="col-4 border text-center"> Sistema de inyecciòn </div>
+                    <div class="col-3 border text-center"> Medición </div>
+                    <div class="col-3 border text-center"> Parametro </div>
+                    <div class="col-1 border text-center"> B </div>
+                    <div class="col-1 border text-center"> M </div>
+            
+                    <div class="col-4 border">  </div>
+                    <div class="col-3 border"> Lorem ipsum dolor sit. </div>
+                    <div class="col-3 border"> Lorem ipsum dolor sit. </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" formControlName="flexRadio1" id="flexRadioDefault1">
+                        </div>  
+                    </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center">  
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" formControlName="flexRadio1" id="flexRadioDefault1">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button type="submit" class="btn btn-outline-primary btn-block float-end">
+                    Guardar
+                </button>
+            </div>
+        </div>
+
+    </form>
+</div>
