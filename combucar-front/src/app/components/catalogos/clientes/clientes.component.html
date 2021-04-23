@@ -1,1 +1,61 @@
-<p>clientes works!</p>
+<hr>
+<h4>Alta de Clientes </h4>
+<hr>
+
+<form>
+
+    <div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Nombre</label>
+            <div class="col-8">
+
+                <input class="form-control" type="text" placeholder="Nombre" formControlName="nombre">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">RFC</label>
+            <div class="col-8">
+                <input class="form-control" type="text" placeholder="RFC" formControlName="rfc">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Identificacion</label>
+            <div class="col-8">
+                <input class="form-control" type="text" placeholder="Identificación" formControlName="identificacion">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Teléfono</label>
+            <div class="col-8">
+                <input class="form-control" type="text" placeholder="Telefono" formControlName="telefono">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Correo</label>
+            <div class="col-8">
+                <input class="form-control" type="text" placeholder="correo@example.com" formControlName="correo">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label">&nbsp;</label>
+        <div class="input-group col-md-8">
+            <button type="submit" class="btn btn-outline-primary btn-block">
+                Guardar
+            </button>
+        </div>
+    </div>
+
+</form>
+
+<!-- <h6>Catálogo Valido</h6>
+<pre>{{ catalogoOperadoresForm.valid }}</pre>
+<h6>Valores Catálogo Operadores</h6>
+<pre>{{ catalogoOperadoresForm.value | json }}</pre> -->
