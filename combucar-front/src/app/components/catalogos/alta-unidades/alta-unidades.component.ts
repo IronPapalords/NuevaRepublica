@@ -23,6 +23,76 @@ export class AltaUnidadesComponent implements OnInit {
     })
   });
 
+  unidades : Unidad[] = [
+    {
+      cliente: 'Alberto Navarrete García',
+      serie: '1598789635645',
+      marca: 'Ford',
+      placas: 'AHN-15A-N00',
+      tipo: 'Pick-up',
+      kilometraje: '15',
+      cilindros: [
+        {
+          serie: '15123',
+          marca: 'Ford',
+          capacidad: '4',
+          fechaFabricacion: new Date('2020-11-01'),
+        },
+        {
+          serie: '15124',
+          marca: 'Ford',
+          capacidad: '4',
+          fechaFabricacion: new Date('2020-11-01'),
+        },
+        {
+          serie: '15125',
+          marca: 'Ford',
+          capacidad: '4',
+          fechaFabricacion: new Date('2020-11-01'),
+        },
+        {
+          serie: '15126',
+          marca: 'Ford',
+          capacidad: '4',
+          fechaFabricacion: new Date('2020-11-01'),
+        }
+      ]
+    },
+    {
+      cliente: 'Alberto Navarrete García',
+      serie: '1532159635311',
+      marca: 'Ford',
+      placas: 'NHA-36B-ANK',
+      tipo: 'Pick-up',
+      kilometraje: '4200',
+      cilindros: [
+        {
+          serie: '13321',
+          marca: 'Ford',
+          capacidad: '4',
+          fechaFabricacion: new Date('2021-02-15'),
+        },
+        {
+          serie: '13322',
+          marca: 'Ford',
+          capacidad: '4',
+          fechaFabricacion: new Date('2021-02-15'),
+        },
+        {
+          serie: '13323',
+          marca: 'Ford',
+          capacidad: '4',
+          fechaFabricacion: new Date('2021-02-15'),
+        },
+        {
+          serie: '13324',
+          marca: 'Ford',
+          capacidad: '4',
+          fechaFabricacion: new Date('2021-02-15'),
+        }
+      ]
+    }
+  ];
   cilindros : Cilindro[] = [];
 
   constructor(private fb: FormBuilder) { }
@@ -61,6 +131,27 @@ export class AltaUnidadesComponent implements OnInit {
         }
       });
     }
+
+    if(this.cilindros.length <= 0){
+      window.alert('Favor de agregar el detalle de los cilindros de la unidad');
+      return;
+    }
+
+    let unidad: Unidad = {
+      cliente: this.unidadForm.get('cliente')?.value,
+      serie: this.unidadForm.get('serie')?.value,
+      marca: this.unidadForm.get('marca')?.value,
+      placas: this.unidadForm.get('placas')?.value,
+      tipo: this.unidadForm.get('tipo')?.value,
+      kilometraje: this.unidadForm.get('kilometraje')?.value,
+      cilindros: this.cilindros
+    }
+    
+    this.unidades.push(unidad);
+    this.cilindros = [];
+
+    window.alert('Unidad Guardada');
+    this.unidadForm.reset();
   }
 
   agregarCilindro(){
@@ -104,4 +195,14 @@ interface Cilindro{
   marca: string,
   capacidad: string,
   fechaFabricacion: Date,
+};
+
+interface Unidad{
+  cliente: string,
+  serie: string,
+  marca: string,
+  placas: string,
+  tipo: string,
+  kilometraje: string,
+  cilindros: Cilindro[]
 };
