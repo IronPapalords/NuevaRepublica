@@ -2,43 +2,47 @@
 <h4>Alta de Clientes </h4>
 <hr>
 
-<form>
+<form (ngSubmit)="guardar()" [formGroup]="clientesForm"> 
 
     <div>
 
         <div class="form-group row">
             <label class="col-2 col-form-label">Nombre</label>
             <div class="col-8">
-
-                <input class="form-control" type="text" placeholder="Nombre" formControlName="nombre">
+                <input class="form-control" type="text" placeholder="Nombre" formControlName="nombre" [class.is-invalid]="clientesForm.controls.errors">
+                <small class="text-danger" *ngIf="campoEsValido('nombre')">Ingrese el nombre del Cliente</small>
             </div>
         </div>
 
         <div class="form-group row">
             <label class="col-2 col-form-label">RFC</label>
             <div class="col-8">
-                <input class="form-control" type="text" placeholder="RFC" formControlName="rfc">
+                <input class="form-control" type="text" placeholder="RFC" formControlName="rfc" [class.is-invalid]="clientesForm.controls.errors">
+                <small class="text-danger" *ngIf="campoEsValido('rfc')">Ingrese el RFC del Cliente con el formato correcto</small>
             </div>
         </div>
 
         <div class="form-group row">
             <label class="col-2 col-form-label">Identificacion</label>
             <div class="col-8">
-                <input class="form-control" type="text" placeholder="Identificación" formControlName="identificacion">
+                <input class="form-control" type="text" placeholder="Identificación" formControlName="identificacion" [class.is-invalid]="clientesForm.controls.errors">
+                <small class="text-danger" *ngIf="campoEsValido('identificacion')">Ingrese el número de identificación del Cliente</small>
             </div>
         </div>
 
         <div class="form-group row">
             <label class="col-2 col-form-label">Teléfono</label>
             <div class="col-8">
-                <input class="form-control" type="text" placeholder="Telefono" formControlName="telefono">
+                <input class="form-control" type="text" placeholder="Telefono" formControlName="telefono" [class.is-invalid]="clientesForm.controls.errors">
+                <small class="text-danger" *ngIf="campoEsValido('telefono')">Ingrese el teléfono del Cliente</small>
             </div>
         </div>
 
         <div class="form-group row">
             <label class="col-2 col-form-label">Correo</label>
             <div class="col-8">
-                <input class="form-control" type="text" placeholder="correo@example.com" formControlName="correo">
+                <input class="form-control" type="text" placeholder="correo@example.com" formControlName="correo" [class.is-invalid]="clientesForm.controls.errors">
+                <small class="text-danger" *ngIf="campoEsValido('correo')">Ingrese el correo del Cliente</small>
             </div>
         </div>
 
@@ -55,7 +59,28 @@
 
 </form>
 
-<!-- <h6>Catálogo Valido</h6>
-<pre>{{ catalogoOperadoresForm.valid }}</pre>
-<h6>Valores Catálogo Operadores</h6>
-<pre>{{ catalogoOperadoresForm.value | json }}</pre> -->
+<hr>
+
+<div class="container mt-5 mb-5">
+
+    <div class="row border-bottom border-dark fw-bold">
+        <div class="col-1">#</div>
+        <div class="col">Cliente</div>
+        <div class="col">RFC</div>
+        <div class="col">Identificación</div>
+        <div class="col">Teléfono</div>
+        <div class="col">Correo</div>
+    </div>
+    <div class="row mt-2 border-bottom pb-2" *ngFor="let cliente of clientes; let i = index" [class.bg-combucar]="(i+1)%2==0">
+        <div class="col">
+            <div class="row">
+                <div class="col-1">{{i+1}}</div>
+                <div class="col">{{cliente.nombre}}</div>
+                <div class="col">{{cliente.rfc}}</div>
+                <div class="col">{{cliente.identificacion}}</div>
+                <div class="col">{{cliente.telefono}}</div>
+                <div class="col">{{cliente.correo}}</div>
+            </div>
+        </div>
+    </div>
+</div>
