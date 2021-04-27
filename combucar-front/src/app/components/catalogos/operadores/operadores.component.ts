@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-operadores',
@@ -76,7 +77,14 @@ export class OperadoresComponent implements OnInit {
     }
 
     this.operadores.push(operador);
-    window.alert('Operador Guardado Exitosamente');
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Operador Guardado Exitosamente',
+      showConfirmButton: false,
+      timer: 1500
+    });
+    
     this.operadoresForm.reset();
   
   }

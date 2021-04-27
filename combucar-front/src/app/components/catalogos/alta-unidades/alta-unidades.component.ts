@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
+
+
 
 @Component({
   selector: 'app-alta-unidades',
@@ -25,7 +28,7 @@ export class AltaUnidadesComponent implements OnInit {
 
   unidades : Unidad[] = [
     {
-      cliente: 'Alberto Navarrete García',
+      cliente: 'Alberto Navarrete Garcï¿½a',
       serie: '1598789635645',
       marca: 'Ford',
       placas: 'AHN-15A-N00',
@@ -59,7 +62,7 @@ export class AltaUnidadesComponent implements OnInit {
       ]
     },
     {
-      cliente: 'Alberto Navarrete García',
+      cliente: 'Alberto Navarrete Garcï¿½a',
       serie: '1532159635311',
       marca: 'Ford',
       placas: 'NHA-36B-ANK',
@@ -133,7 +136,14 @@ export class AltaUnidadesComponent implements OnInit {
     }
 
     if(this.cilindros.length <= 0){
-      window.alert('Favor de agregar el detalle de los cilindros de la unidad');
+      Swal.fire({
+        position: 'center',
+        icon: 'warning',
+        title: 'Favor de agregar el detalle de los cilindros de la unidad',
+        showConfirmButton: false,
+        timer: 1500
+      });
+      
       return;
     }
 
@@ -150,7 +160,14 @@ export class AltaUnidadesComponent implements OnInit {
     this.unidades.push(unidad);
     this.cilindros = [];
 
-    window.alert('Unidad Guardada');
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Unidad Guardada',
+      showConfirmButton: false,
+      timer: 1500
+    });
+
     this.unidadForm.reset();
   }
 

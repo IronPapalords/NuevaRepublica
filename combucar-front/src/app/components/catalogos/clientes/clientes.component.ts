@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-clientes',
@@ -59,7 +60,16 @@ export class ClientesComponent implements OnInit {
     }
 
     this.clientes.push(cliente);
-    window.alert('Cliente Guardado Exitosamente');
+    
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Cliente Guardado Exitosamente',
+      showConfirmButton: false,
+      timer: 1500
+    });
+    
+
     this.clientesForm.reset();
   }
 

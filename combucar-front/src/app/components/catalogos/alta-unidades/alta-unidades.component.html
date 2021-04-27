@@ -55,7 +55,7 @@
                         <th scope="col">Serie</th>
                         <th scope="col">Marca</th>
                         <th scope="col">Capacidad</th>
-                        <th scope="col">Fecha de Fabricación</th>
+                        <th scope="col">Fecha de FabricaciÃ³n</th>
                         <th scope="col"></th>
                     </tr>
                 </thead>
@@ -75,7 +75,7 @@
                         <td><input class="form-control" type="text" placeholder="Serie" formControlName="serie" [class.is-invalid]="isCilindroSerieInvalid"></td>
                         <td><input class="form-control" type="text" placeholder="Marca" formControlName="marca" [class.is-invalid]="isCilindroMarcaInvalid"></td>
                         <td><input class="form-control" type="text" placeholder="Tipo" formControlName="capacidad"></td>
-                        <td><input class="form-control" type="date" placeholder="Fecha de fabricación" formControlName="fechaFabricacion" [class.is-invalid]="isCilindroFechaFabricacionInvalid"></td>
+                        <td><input class="form-control" type="date" placeholder="Fecha de fabricaciÃ³n" formControlName="fechaFabricacion" [class.is-invalid]="isCilindroFechaFabricacionInvalid"></td>
                         <td><button type='button' (click)="agregarCilindro()" class="btn btn-outline-primary btn-block">Agregar</button></td>
                     </tr>
                 </tfoot>
@@ -124,7 +124,7 @@
                         <div class="col">Serie</div>
                         <div class="col">Marca</div>
                         <div class="col">Capacidad</div>
-                        <div class="col">Fecha de Fabricación</div>
+                        <div class="col">Fecha de FabricaciÃ³n</div>
                     </div>
                     <div class="row mt-1" *ngFor="let cilindro of unidad.cilindros; let c = index">
                         <div class="col-1">{{c+1}}</div>
