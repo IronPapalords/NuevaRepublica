@@ -9,6 +9,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ConversionComponent implements OnInit {
 
+  title: string = 'FORMATO DE CONTROL DE CONVERSION';
+
   conversionForm: FormGroup = this.fb.group({
     numerovin:     [ '', [ Validators.required, Validators.maxLength(17) ]],
     mecanica:      [ '', Validators.required ],

@@ -1,0 +1,11 @@
+.titleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 2px 1px 21px 1px;
+}
+
+.titulo {
+    font-size: 15px;
+    font-weight: bold;
+}

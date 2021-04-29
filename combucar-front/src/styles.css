@@ -91,3 +91,12 @@ background-color: #3D69AC;
     margin-left: 50px;
     border: 1px solid red;
 }
+
+.marginx {    
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.margenr{
+    padding-left: 0px;
+}

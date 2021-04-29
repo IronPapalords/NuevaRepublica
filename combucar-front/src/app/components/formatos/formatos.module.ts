@@ -6,6 +6,7 @@ import { ConversionComponent } from './conversion/conversion.component';
 import { PreconversionComponent } from './preconversion/preconversion.component';
 import { ConversionCilindrosComponent } from './conversion-cilindros/conversion-cilindros.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HelpersModule } from '../../helpers/helpers.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormatosRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HelpersModule
   ]
 })
 export class FormatosModule { }

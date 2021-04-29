@@ -8,9 +8,7 @@ import { Component, Output, EventEmitter, Input } from '@angular/core';
 })
 export class NavbarComponent {
 
-  
-  @Input()
-  toogleMenu!: boolean;
+  @Input() toogleMenu!: boolean;
 
   @Output() newToggle:EventEmitter<boolean> = new EventEmitter<boolean>();
 
