@@ -12,7 +12,7 @@ export class PreconversionComponent implements OnInit {
 
   @ViewChild('staticTabs', { static: false }) staticTabs!: TabsetComponent;
 
-  title: string = 'FORMATO DE PRECONVERSION';
+  title: string = 'PRE-CONVERSIÓN';
   value: string = '';
   
   preconversionForm: FormGroup = this.fb.group({

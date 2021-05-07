@@ -1,5 +1,6 @@
 
 <!-- <pre>{{toogleMenu}}</pre> -->
+
 <div [ngClass]="{'sticky-top': toogleMenu}" class="navbarProps">
 
   <div class="row mx-2">
@@ -11,11 +12,19 @@
           <!-- <span class="navbar-toggler-icon"></span> -->
         </button>
         
+        
+
+        <img src="assets/brand/combucar.png" alt="" width="160" height="90" style="margin: 12px;" class="d-inline-block align-text-top">
+
+        <div style="color:white;">
+          <h2><strong>COMBUCAR</strong> CONTROL</h2>
+          <h5>Herramienta para la gesti&oacute;n, monitoreo y seguimiento de las unidades convertidas en nuestros talleres.</h5>
+        </div>
+        
         <div class="navbar-collapse collapse justify-content-end">
           <button class="btn btn-danger" (click)="logout()">
-            <i class="bi bi-arrow-right-circle"></i> 
+            <i class="bi bi-box-arrow-right"></i>
           </button>
-          <div class="d-xs-none mx-1 text-white">Salir</div>
         </div>
         
       </nav>

@@ -1,16 +1,34 @@
-<div class="container">
+<app-title [titulo]="title"></app-title>
 
-    <app-title [titulo]="title"></app-title>
+<div class="container" style="background: white; padding: 42px;">
+
+    
 
     <form (ngSubmit)="guardarPreconversion()" [formGroup]="preconversionForm">
 
         <div *ngIf="value" class="mb-3">
-                <pre>Te falta llenar los datos del formulario {{value}} <b>pelotudo</b></pre>
+                <pre>Te falta llenar los datos del formulario {{value}} </pre>
         </div>
 
         <tabset #staticTabs>
             <tab heading="Cliente" (selectTab)="onSelectTab($event)"> 
-                <app-cliente [preconversionForm]="preconversionForm" [staticTabs]="staticTabs"></app-cliente>
+                <!--app-cliente [preconversionForm]="preconversionForm" [staticTabs]="staticTabs"></app-cliente-->
+                <TABLE style="width: 100%; text-align: center; margin: 40px;">
+                    <TR>
+                    <TD>
+                        <div style="align-items: center; color:#143045;opacity: 70%; width: 350px; text-align: center;">
+                            <i class="bi bi-ui-checks" style="font-size: 5rem; color: cornflowerblue;"></i>
+                            <h1>Cliente</h1>
+                        </div>
+                    </TD>
+                    <TD>
+                        <div style="align-items: center; color:#143045;opacity: 70%; width: 350px; text-align: center;">
+                            <i class="bi bi-arrow-left-right" style="font-size: 5rem; color: cornflowerblue;"></i>
+                            <h1>Unidad</h1>
+                        </div>
+                    </TD>
+                    </TR>
+                </TABLE>
             </tab>
             <tab heading="Inspección" (selectTab)="onSelectTab($event)"> 
                 <app-inspeccion [preconversionForm]="preconversionForm" [staticTabs]="staticTabs"></app-inspeccion>
@@ -24,12 +42,12 @@
             <!-- <tab heading="Disabled">Static content 3</tab> -->
         </tabset>
         
-        <div class="row">
-            <div class="col-6">
-                <button type="submit" class="btn btn-outline-primary btn-block float-end">
-                    Guardar
+        <div style="padding: 42px; text-align: center;">
+            
+                <button type="submit" class="btn btn-outline-primary">
+                    SIGUIENTE
                 </button>
-            </div>
+            
         </div>
 
     </form>
