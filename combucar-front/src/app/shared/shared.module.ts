@@ -1,3 +1,4 @@
+import { ProtectedRoutingModule } from './../protected/protected-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -18,7 +19,8 @@ import { FormatosModule } from '../components/formatos/formatos.module';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ProtectedRoutingModule
   ]
 })
 export class SharedModule { }

@@ -3,6 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./protected/protected.module').then( m => m.ProtectedModule)
+  },
+  {
     path: 'graficas',
     loadChildren: () => import('./components/graficas/graficas.module').then( m => m.GraficasModule)
   },
@@ -24,7 +32,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo:'formatos'
+    redirectTo:'auth'
   }
 ];
 

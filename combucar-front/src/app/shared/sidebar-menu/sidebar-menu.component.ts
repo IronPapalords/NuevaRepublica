@@ -18,54 +18,54 @@ export class SidebarMenuComponent  {
   dashboardMenu: MenuItem[] = [
     {
       texto: 'Ventas',
-      ruta: './graficas/barras'
+      ruta: '/graficas/barras'
     }
   ];
 
   catalogos: MenuItem[] = [
     {
       texto: 'Operadores',
-      ruta: './catalogos/operadores'
+      ruta: '/catalogos/operadores'
     },
     {
       texto: 'Clientes',
-      ruta: './catalogos/clientes'
+      ruta: '/catalogos/clientes'
     },
     {
       texto: 'Alta de Unidades',
-      ruta: './catalogos/altaUnidades'
+      ruta: '/catalogos/altaUnidades'
     }
   ];
 
   formatosMenu: MenuItem[] = [
     {
       texto: 'Control de conversión',
-      ruta: './formatos/conversion'
+      ruta: '/formatos/conversion'
     },
     {
       texto: 'Preconversion',
-      ruta: './formatos/preconversion'
+      ruta: '/formatos/preconversion'
     },
     {
       texto: 'Control conversiones y cilindros',
-      ruta: './formatos/conversionCilindros'
+      ruta: '/formatos/conversionCilindros'
     },
   ];
 
   ingresosMenu: MenuItem[] = [
     {
       texto: 'Recepcion',
-      ruta: './ingresos/recepcion'
+      ruta: '/ingresos/recepcion'
     },
     {
       texto: 'Entrega',
-      ruta: './ingresos/entrega'
+      ruta: '/ingresos/entrega'
     }    
   ];
   informacionMenu: MenuItem[] = [
     {
       texto: 'Informacion',
-      ruta: './informacion/acerca'
+      ruta: '/informacion/acerca'
     },
     
   ];

@@ -30,11 +30,12 @@ Ejecuta en una consola dentro la carpeta del proyecto
 # DOCKER
 ## Pre-requisitos:
 Install Docker for Desktop
-
 `https://www.docker.com/products/docker-desktop`
+
  ## Generar imagen desde consola
 `docker build . -t combucar-front`
-## Ejecutar contenedor de imagen
+
+## Ejecutar contenedor de imagen localmente
 docker run -d --name combucar -p 3001:80 combucar-front
 
 ## Ejecutar en browser
@@ -42,9 +43,9 @@ http://localhost:3001
 
 
 ## CREAR TAG DE IMAGEN y SUBIR A DOCKER HUB
-`docker tag combucar-front dobok1/combucar-front:v4`
+`docker tag combucar-front dobok1/combucar-front:v5`
 
-`docker push dobok1/combucar-front:v4`
+`docker push dobok1/combucar-front:v5`
 
 
 ## Template de bootstrap

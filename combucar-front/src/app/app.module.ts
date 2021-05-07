@@ -6,8 +6,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { TitleComponent } from './helpers/title/title.component';
-import { HelpersModule } from './helpers/helpers.module';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +23,8 @@ import { HelpersModule } from './helpers/helpers.module';
       registrationStrategy: 'registerWhenStable:30000'
     }),
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,6 @@
+$font-path: "../assets/fonts/" !default;
+
+@font-face{
+  font-family: Karla;
+  src: url('#{$font-path}/Karla-Regular.ttf');
+}

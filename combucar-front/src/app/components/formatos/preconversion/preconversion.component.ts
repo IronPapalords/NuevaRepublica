@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { TabDirective, TabsetComponent } from 'ngx-bootstrap/tabs';
 
 @Component({
   selector: 'app-preconversion',
@@ -9,8 +10,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class PreconversionComponent implements OnInit {
 
-  title: string = 'FORMATO DE PRECONVERSION';
+  @ViewChild('staticTabs', { static: false }) staticTabs!: TabsetComponent;
 
+  title: string = 'FORMATO DE PRECONVERSION';
+  value: string = '';
+  
   preconversionForm: FormGroup = this.fb.group({
 
     fechaActual:     ['',Validators.required],
@@ -31,6 +35,7 @@ export class PreconversionComponent implements OnInit {
      
 
     // Inspección visual preliminar
+    test:      ['',],    
     flexRadio1:      ['',],    
     flexRadio2:      ['',],    
     flexRadio3:      ['',],    
@@ -115,10 +120,26 @@ export class PreconversionComponent implements OnInit {
     
 
   })
+  
 
   constructor( private fb: FormBuilder ) { }
-
   ngOnInit(): void {
+
+  }
+
+  /* validaPreconversion() {
+    console.log(this.staticTabs.tabs);
+  } */
+
+  /* selectTab(tabId: number) {
+    console.log('El tab  ', this.staticTabs.tabs[tabId]);
+    console.log('El tab seleccionado es ', this.staticTabs.tabs[tabId].active);
+    this.staticTabs.tabs[tabId].active = true;
+  } */
+
+  
+  onSelectTab(data: TabDirective) {
+    this.value = data.heading;
   }
 
   campoEsValido( campo: string) {
@@ -127,12 +148,12 @@ export class PreconversionComponent implements OnInit {
   }
 
   guardarPreconversion(){
+    console.log(this.preconversionForm.value);
     if( this.preconversionForm.invalid ){
       this.preconversionForm.markAllAsTouched();
       return;
     }
 
-    console.log(this.preconversionForm.value);
 
     this.preconversionForm.reset();
   }

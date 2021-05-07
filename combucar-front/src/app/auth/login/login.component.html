@@ -1,0 +1,41 @@
+<form class="login100-form" autocomplete="off" [formGroup]="loginForm" (ngSubmit)="login()">
+                
+    <div class="my-2 d-block text-center">
+        <img src="assets/brand/vegeta-trans.png" width="150" height="150" alt="logo">
+        <div class="titleCombucar">Combucar</div>
+    </div>
+    <div class="text-center my-2 lead subseccion text-white"> Login </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" formGroupName="user" class="form-control" id="floatingInput" placeholder="Ingresar usuario">
+        <label for="floatingInput">Usuario</label>
+    </div>
+    <div class="form-floating">
+        <input type="password" formGroupName="password" class="form-control" id="floatingPassword" placeholder="ingresar contraseña">
+        <label for="floatingPassword">Contraseña</label>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary boton w-100 my-4" [disabled]="loginForm.invalid">
+                Ingresar
+            </button>
+        </div>
+    </div>
+
+    <div class="container my-2">
+        <div class="row">
+            <div class="col text-center">
+
+                <span class="text-white">
+                    ¿No tienes cuenta?
+                </span>
+        
+                <a routerLink="/auth/register" class="txt2">
+                    Crear una aquí
+                </a>
+
+            </div>
+        </div>
+    </div>
+</form>

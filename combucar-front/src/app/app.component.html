@@ -1,25 +1,4 @@
 <!-- <div class="wrapper">
-    <div class="row">
-        <div class="col-sm-3">
-            <app-sidebar-menu></app-sidebar-menu>
-        </div>
-        <div class="col-xs-12 col-9 fondo">
-            <div class="lead d-flex bg-light">
-                <div class="mb-2">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerMenuLeft" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <img src="assets/brand/combucar.png" alt="" width="80" height="50" class="d-inline-block align-text-top">
-                    Combucar
-                </div>
-            </div>
-            <router-outlet></router-outlet>
-        </div>
-    </div>    
-</div> -->
-
-
-<div class="wrapper">
     <app-sidebar-menu [toogleMenu]="toogleMenu"></app-sidebar-menu>
     <div class="main">
         <app-navbar [toogleMenu]="toogleMenu" (newToggle)="getToggleValue( $event )"></app-navbar>
@@ -30,3 +9,6 @@
         </main>
     </div>
 </div>
+ -->
+
+ <router-outlet></router-outlet>

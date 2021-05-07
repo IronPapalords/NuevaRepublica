@@ -1,0 +1,11 @@
+@mixin centerdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+@mixin shadow {
+    -webkit-box-shadow: 10px 10px 11px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 11px -2px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 11px -2px rgba(0,0,0,0.75);
+}

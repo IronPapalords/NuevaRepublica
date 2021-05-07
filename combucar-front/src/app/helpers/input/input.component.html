@@ -1,0 +1,5 @@
+
+<div [formGroup]="parent">
+    <input type="text" class="form-control" [formControlName]="nameInput" [placeholder]="placeholder" [class.is-invalid]="campoEsValido(nameInput)" /> 
+    <span class="form-text text-danger" *ngIf="campoEsValido(nameInput)" > Debe ingresar {{ nameInput }} </span>    
+</div>

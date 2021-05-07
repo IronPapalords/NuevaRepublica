@@ -1,0 +1,147 @@
+        <div class="text-center">
+            <h5>Diagnóstico sistema de Encendido/Inyección</h5>
+        </div>
+        <div class="row" [formGroup]="preconversionForm">
+            <div class="col-sm-12 col-md-6">
+                <div class="row row-cols-4">
+                    <div class="col-4 border text-center"> Sis. de alta tensión </div>
+                    <div class="col-3 border text-center"> Medición </div>
+                    <div class="col-3 border text-center"> Parámetro </div>
+                    <div class="col-1 border text-center"> B </div>
+                    <div class="col-1 border text-center"> M </div>
+            
+                    <div class="col-4 border">Bujias</div>
+                    <div class="col-3 border"><app-input [parent]="preconversionForm" nameInput="bujias" placeholder="Bujias"></app-input> </div>
+                    <div class="col-3 border"> máx. 6k </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="bujiascheck" value="B" id="flexRadioDefault1"> </div>  
+                    </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center">  
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="bujiascheck" value="M" id="flexRadioDefault1"> </div>
+                    </div>
+
+                    <div class="col-4 border">Cables de bujias</div>
+                    <div class="col-3 border"><app-input [parent]="preconversionForm" nameInput="cablesbujias" placeholder="Cables de bujias"></app-input> </div>                       
+                    <div class="col-3 border"> máx. 8-9k </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="cablesbujiascheck" value="B" id="flexRadioDefault1"> </div>  
+                    </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center">  
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="cablesbujiascheck" value="M" id="flexRadioDefault1"> </div>
+                    </div>
+
+                    <div class="col-4 border">Rotor</div>
+                    <div class="col-3 border"> <app-input [parent]="preconversionForm" nameInput="rotor" placeholder="Rotor"></app-input> </div>                       
+                    <div class="col-3 border"> 0 Ohmios </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="rotorcheck" value="B" id="flexRadioDefault1"> </div>  
+                    </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center">  
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="rotorcheck" value="M" id="flexRadioDefault1"> </div>
+                    </div>
+
+                    <div class="col-4 border">Contactos tapa distrib</div>
+                    <div class="col-3 border"> <app-input [parent]="preconversionForm" nameInput="contactostapa" placeholder="Contactos tapa distrib"></app-input> </div>                       
+                    <div class="col-3 border"> 0 Ohmios </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="contactostapacheck" value="B" id="flexRadioDefault1"> </div>  
+                    </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center">  
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="contactostapacheck" value="M" id="flexRadioDefault1"> </div>
+                    </div>
+                </div>
+                <div class="row"><div class="col-12">&nbsp;</div></div>
+                <div class="row row-cols-5">
+                    <div class="col-4 border text-center"> Sistema de inyecciòn </div>
+                    <div class="col-3 border text-center"> Medición </div>
+                    <div class="col-3 border text-center"> Parámetro </div>
+                    <div class="col-1 border text-center"> B </div>
+                    <div class="col-1 border text-center"> M </div>
+            
+                    <div class="col-4 text-left border">R de inyectores</div>
+                    <div class="col-3 text-left border"> <app-input [parent]="preconversionForm" nameInput="rinyectores" placeholder="R de inyectores"></app-input>  </div>                      
+                    <div class="col-3 text-center border">11/17 ohmios</div>
+                    <div class="col-1 text-left border d-flex justify-content-center align-items-center"> 
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="rinyectorescheck" value="B" id="flexRadioDefault1"> </div>  
+                    </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center">  
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="rinyectorescheck" value="M" id="flexRadioDefault1"> </div>
+                    </div>
+
+                    <div class="col-4 text-left border">Ajuste corto</div>
+                    <div class="col-3 border"> <app-input [parent]="preconversionForm" nameInput="ajustecorto" placeholder="Ajuste corto"></app-input> </div>
+                    <div class="col-3 border">oscilacion cercana a 0</div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="ajustecortocheck" value="B" id="flexRadioDefault1"> </div>  
+                    </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center">  
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="ajustecortocheck" value="M" id="flexRadioDefault1"> </div>
+                    </div>
+
+                    <div class="col-4 text-left border">Ajuste largo</div>
+                    <div class="col-3 border"> <app-input [parent]="preconversionForm" nameInput="ajustelargo" placeholder="Ajuste largo"></app-input> </div>                
+                    <div class="col-3 border">cercano a 0</div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="ajustelargocheck" value="B" id="flexRadioDefault1"> </div>  
+                    </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center">  
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="ajustelargocheck" value="M" id="flexRadioDefault1"> </div>
+                    </div>
+                </div>
+            </div>
+
+           <div class="d-xs-none col-md-1"></div>
+
+           <div class="col-sm-12 col-md-5 margenr">
+               <div class="row row-cols-5">
+
+                    <div class="col-4 border text-center">Caida de tensión </div>
+                    <div class="col-3 border text-center">Medición </div>
+                    <div class="col-3 border text-center">Parámetro </div>
+                    <div class="col-1 border text-center">B</div>
+                    <div class="col-1 border text-center">M</div>
+            
+                    <div class="col-4 text-left border">Alimentación bobina</div>
+                    <div class="col-3 text-left border"> <app-input [parent]="preconversionForm" nameInput="alimentacionbobina" placeholder="Alimentación bobina"></app-input> </div>                     
+                    <div class="col-3 text-center border">500 mV máx.</div>
+                    <div class="col-1 text-left border d-flex justify-content-center align-items-center"> 
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="alimentacionbobinacheck" value="B" id="flexRadioDefault1"> </div>  
+                    </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center">  
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="alimentacionbobinacheck" value="M" id="flexRadioDefault1"> </div>
+                    </div>
+
+                    <div class="col-4 text-left border">Alimentación transistor Pot.</div>
+                    <div class="col-3 text-left border"> <app-input [parent]="preconversionForm" nameInput="alimentaciontransistor" placeholder="Alimentación bobina"></app-input> </div>
+                        
+                    <div class="col-3 text-center border">500 mV máx.</div>
+                    <div class="col-1 text-left border d-flex justify-content-center align-items-center"> 
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="alimentaciontransistorcheck" value="B" id="flexRadioDefault1"> </div>  
+                    </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center">  
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="alimentaciontransistorcheck" value="M" id="flexRadioDefault1"> </div>
+                    </div>
+
+                    <div class="col-4 text-left border">Masa módular distribuidor</div>
+                    <div class="col-3 text-left border"> <app-input [parent]="preconversionForm" nameInput="masamodulardist" placeholder="Masa módular distribuidor"></app-input> </div>
+                    <div class="col-3 text-center border">200 mV máx.</div>
+                    <div class="col-1 text-left border d-flex justify-content-center align-items-center"> 
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="masamodulardistcheck" value="B" id="flexRadioDefault1"> </div>  
+                    </div>
+                    <div class="col-1 border d-flex justify-content-center align-items-center">  
+                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="masamodulardistcheck" value="M" id="flexRadioDefault1"> </div>
+                    </div>
+
+               </div>
+           </div>
+        </div>
+
+
+<!-- <div class="row">
+    <div class="col-12">
+        <button type="button" (click)="selectTab(1)" class="btn btn-outline-primary btn-block float-end">
+            Siguiente
+        </button>
+    </div>
+</div>
+ -->

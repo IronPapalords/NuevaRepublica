@@ -1,0 +1,62 @@
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+@import 'menu';
+@import 'login';
+
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    font-family: Karla;
+}
+a {
+    text-decoration: none;
+}
+
+.titleCombucar {
+    font-size: 21px;
+    font-family: Karla, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.wrapper{
+    align-items: stretch;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    min-width: 0;
+    transition: margin-left .3s ease-in-out,left .3s ease-in-out,margin-right .3s ease-in-out,right .3s ease-in-out;
+}
+
+.fondo {
+  background-color: $color-whitelight;
+}
+
+.profile {
+    background: $color-white;
+    margin-inline: auto;
+    color: $color-blue-profile;
+    min-width: 100px;
+    padding: 1.5rem 1rem 1rem;
+    text-align: center;
+    width: 200px;
+}
+
+
+
+.marginx {    
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.margenr{
+    padding-left: 0px;
+}

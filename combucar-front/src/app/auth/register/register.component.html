@@ -1,0 +1,41 @@
+<form class="login100-form" autocomplete="off" [formGroup]="registerForm" (ngSubmit)="register()"> 
+                
+    <div class="text-center my-2 lead subseccion text-white"> Nuevo usuario </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" formGroupName="user" class="form-control" id="floatingInput" placeholder="Ingresar nombre">
+        <label for="floatingInput">Nombre</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" formGroupName="email" class="form-control" id="floatingInput" placeholder="Ingresar correo">
+        <label for="floatingInput">Correo Electronico</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" formGroupName="password" class="form-control" id="floatingInput" placeholder="Ingrese su contraseña">
+        <label for="floatingInput">Contraseña</label>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary boton  w-100 my-4" [disabled]="registerForm.invalid">
+                Registrar
+            </button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text-center my-3">
+
+            <span class="text-white">
+                ¿Ya tienes cuenta?
+            </span>
+    
+            <a routerLink="/auth/login" class="txt2">
+                Ingresa aquí
+            </a>
+            
+        </div>
+    </div>
+</form>

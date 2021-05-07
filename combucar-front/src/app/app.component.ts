@@ -7,13 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  toogleMenu: boolean = true;
+  /* toogleMenu: boolean = true;
 
   getToggleValue( newToggle: boolean ) {
     console.log({newToggle});
-
     this.toogleMenu = newToggle;
   }
 
-  title = 'combucar-front';
+  title = 'combucar-front'; */
 }
