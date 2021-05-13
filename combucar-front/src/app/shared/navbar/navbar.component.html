@@ -1,6 +1,4 @@
 
-<!-- <pre>{{toogleMenu}}</pre> -->
-
 <div [ngClass]="{'sticky-top': toogleMenu}" class="navbarProps">
 
   <div class="row mx-2">
@@ -9,18 +7,47 @@
         <!-- HAMBURGRUESA -->
         <button (click)="toggleMenu()" class="btn btn-primary">
           <i class="bi bi-list"></i>
-          <!-- <span class="navbar-toggler-icon"></span> -->
         </button>
         
-        
+        <a routerLink="/home/inicio">
+          <img src="assets/brand/combucar.png" alt="" width="160" height="90" style="margin: 12px;" class="d-inline-block align-text-top">        
+        </a>
 
-        <img src="assets/brand/combucar.png" alt="" width="160" height="90" style="margin: 12px;" class="d-inline-block align-text-top">
+        <div class="row">
+          <div class="col-7">
+            
+            <div style="color:white;">
+              <h2><strong>COMBUCAR</strong> CONTROL</h2>
+              <h5>Herramienta para la gesti&oacute;n, monitoreo y seguimiento de las unidades convertidas en nuestros talleres.</h5>
+            </div>
+          
+          </div>
+          <div class="col-5">
+              
+            <div class="row text-white ml-4">
+              <div class="col">
+                <div>
+                    Taller: Coalcalco 
+                </div>
+                <div>
+                    Nombre: Oscar Hernández
+                </div>
+                <div>
+                    Perfil: Administrador
+                </div>
+              </div>
+            </div>
 
-        <div style="color:white;">
-          <h2><strong>COMBUCAR</strong> CONTROL</h2>
-          <h5>Herramienta para la gesti&oacute;n, monitoreo y seguimiento de las unidades convertidas en nuestros talleres.</h5>
+          </div>
         </div>
+
         
+
+        
+
+
+        
+        <!-- LOGOUT -->
         <div class="navbar-collapse collapse justify-content-end">
           <button class="btn btn-danger" (click)="logout()">
             <i class="bi bi-box-arrow-right"></i>

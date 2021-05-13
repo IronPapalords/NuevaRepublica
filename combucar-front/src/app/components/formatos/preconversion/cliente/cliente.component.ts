@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { TabsetComponent } from 'ngx-bootstrap/tabs';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cliente',
@@ -16,6 +17,16 @@ export class ClienteComponent implements OnInit {
   @Input() preconversionForm!: FormGroup;
 
   ngOnInit(): void {
+  }
+
+  buscarCliente () {
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Consulta exitosa',
+      showConfirmButton: false,
+      timer: 1500
+    });
   }
 
   

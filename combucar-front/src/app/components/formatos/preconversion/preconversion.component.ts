@@ -14,6 +14,7 @@ export class PreconversionComponent implements OnInit {
 
   title: string = 'PRE-CONVERSIÓN';
   value: string = '';
+  toogleCliente: boolean = false;
   
   preconversionForm: FormGroup = this.fb.group({
 
@@ -21,6 +22,7 @@ export class PreconversionComponent implements OnInit {
     taller:          ['',Validators.required],
     horaentrada:     ['',Validators.required],
     horatermino:     ['',Validators.required],
+    buscarNombreCliente:   ['',],
     nombreCliente:   ['',Validators.required],
     telefonoCliente: ['',Validators.required],
     vendedor:        ['',Validators.required],
@@ -137,6 +139,9 @@ export class PreconversionComponent implements OnInit {
     this.staticTabs.tabs[tabId].active = true;
   } */
 
+  buscarcliente () {
+    this.toogleCliente = !this.toogleCliente;
+  }
   
   onSelectTab(data: TabDirective) {
     this.value = data.heading;

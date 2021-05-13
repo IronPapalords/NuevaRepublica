@@ -22,7 +22,7 @@ export class LoginComponent {
     console.log(this.loginForm.value);
     console.log(this.loginForm.valid);
 
-    this.router.navigateByUrl('/home');
+    this.router.navigateByUrl('/home/inicio');
 
   }
 

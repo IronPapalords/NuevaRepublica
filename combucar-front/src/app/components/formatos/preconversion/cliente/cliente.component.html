@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col">
         
-        <div class="row">
+       <!--  <div class="row">
             
             <div class="col-2"> Fecha </div>
             <div class="col-auto"> 
@@ -12,7 +12,6 @@
                 <div class="row">
                     <div class="col-xs-3 col-sm-4"> Hora entrada </div>
                     <div class="col-sm-8"> 
-                        <!-- <input type="datetime-local" class="form-control" formControlName="horaentrada" maxlength="17"  placeholder="Hora entrada" /> -->
                         <app-datetime [parent]="preconversionForm" nameInput="horaentrada" placeholder="Hora entrada"></app-datetime>
                     </div>
                 </div>
@@ -23,15 +22,22 @@
                         </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <div class="row my-1">
-            <!-- <div class="col-3"> Taller </div> -->
-            <label class="col-sm-2 col-form-label">Taller</label>
-            <div class="col-sm-10 col-xs-12"> 
-                <app-input [parent]="preconversionForm" nameInput="taller" placeholder="Nombre Taller"></app-input>                        
-            </div>
+        <div class="row">            
+            <div class="col-sm-8 col-xs-12 d-flex align-items-center justify-content-center">
+                <div style="color:#143045;opacity: 70%; width: 34px;">
+                    <i class="bi bi-search" style="font-size: 1rem; color: cornflowerblue;"></i>
+                </div>
+                <div style="width: 361px;">
+                    <app-input [parent]="preconversionForm" nameInput="buscarNombreCliente" placeholder="buscar cliente"></app-input>                                        
+                </div>
+                <button type="button" (click)="buscarCliente()" class="btn btn-outline-primary btn-block mx-2">
+                    Buscar
+                </button>
+            </div>            
         </div>
+        
     </div>
 </div>
 
@@ -119,10 +125,10 @@
     </div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
     <div class="col-12">
         <button type="button" (click)="selectTab(1)" class="btn btn-outline-primary btn-block float-end">
             Siguiente
         </button>
     </div>
-</div>
+</div> -->

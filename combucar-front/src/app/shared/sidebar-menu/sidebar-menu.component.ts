@@ -43,7 +43,7 @@ export class SidebarMenuComponent  {
       ruta: '/formatos/conversion'
     },
     {
-      texto: 'Preconversion',
+      texto: 'Pre-conversión',
       ruta: '/formatos/preconversion'
     },
     {

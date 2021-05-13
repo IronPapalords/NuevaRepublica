@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   }
 
 
-  toogleMenu: boolean = true;
+  toogleMenu: boolean = false;
 
   getToggleValue( newToggle: boolean ) {
     console.log({newToggle});

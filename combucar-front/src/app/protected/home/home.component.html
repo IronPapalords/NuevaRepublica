@@ -2,42 +2,9 @@
     <app-sidebar-menu [toogleMenu]="toogleMenu"></app-sidebar-menu>
     <div class="main">
         <app-navbar [toogleMenu]="toogleMenu" (newToggle)="getToggleValue( $event )"></app-navbar>
-        <main class="content mt-4">
+        <main class="content">
             <div class="container-fluid">
                 <router-outlet></router-outlet>
-
-                <TABLE style="width: 100%; text-align: center; margin: 70px;">
-                    <TR>
-                       <TD>
-                        <div style="align-items: center; 
-                                    color:white;
-                                    background: linear-gradient(to bottom right, #071b2b, #143045);
-                                    -moz-border-radius:10px;
-                                    -webkit-border-radius:10px;
-                                    border-radius:10px;
-                                    width: 350px;
-                                    text-align: center;
-                                    padding-top: 1em;
-                                    padding-bottom: 2em;">
-                            <i class="bi bi-card-checklist" style="font-size: 3.5rem; color: #0ac729;"></i>
-                            <h3>Pre-Conversi&oacute;n</h3>
-                        </div>
-                       </TD>
-                       <TD>
-                        <div style="align-items: center; color:white;opacity: 70%; width: 350px; text-align: center;">
-                            <i class="bi bi-ui-checks" style="font-size: 5rem; color: cornflowerblue;"></i>
-                            <h1>PROCESOS</h1>
-                        </div>
-                       </TD>
-                       <TD>
-                        <div style="align-items: center; color:white;opacity: 70%; width: 350px; text-align: center;">
-                            <i class="bi bi-arrow-left-right" style="font-size: 5rem; color: cornflowerblue;"></i>
-                            <h3>Recepci&oacute;n y Entrega</h3>
-                        </div>
-                       </TD>
-                    </TR>
-                 </TABLE>
-
             </div>
         </main>
     </div>
