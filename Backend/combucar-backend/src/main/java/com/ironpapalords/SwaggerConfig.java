@@ -38,7 +38,7 @@ public class SwaggerConfig {
 	
 	private ApiInfo apiInfo() {
 	    return new ApiInfo(
-	      "User-Role REST API",
+	      "Usuari-Rol REST API",
 	      "API para acceso y manejo de usuarios y roles..",
 	      "1.0",
 	      "Terms of service",

@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ironpapalords.model.Usuario;
-import com.ironpapalords.repository.UserRepository;
+import com.ironpapalords.repository.UsuarioRepository;
 
 @RestController("/api/v1")
 public class UserController {
 
 	@Autowired
-	UserRepository userRepo;
+	UsuarioRepository userRepo;
 
 	@GetMapping("/users")
 	List<Usuario> getAll() {

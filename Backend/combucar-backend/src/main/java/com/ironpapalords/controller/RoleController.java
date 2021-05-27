@@ -11,28 +11,28 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ironpapalords.model.Role;
-import com.ironpapalords.repository.RoleRepository;
+import com.ironpapalords.model.Rol;
+import com.ironpapalords.repository.RolRepository;
 
 @RestController
 public class RoleController {
 
 	@Autowired
-	RoleRepository roleRepo;
+	RolRepository roleRepo;
 
 	@GetMapping("/roles")
-	List<Role> getAll() {
+	List<Rol> getAll() {
 		return roleRepo.findAll();
 	}
 
 	@PostMapping("/roles")
-	Role newRole(@RequestBody Role role) {
-		return roleRepo.save(role);
+	Rol newRole(@RequestBody Rol rol) {
+		return roleRepo.save(rol);
 	}
 
 	@PutMapping("/roles/{id}")
-	Role replaceRole(@RequestBody Role newRole, @PathVariable Long id) {
-		return roleRepo.save(newRole);
+	Rol replaceRole(@RequestBody Rol newRol, @PathVariable Long id) {
+		return roleRepo.save(newRol);
 	}
 
 	@DeleteMapping("/roles/{id}")

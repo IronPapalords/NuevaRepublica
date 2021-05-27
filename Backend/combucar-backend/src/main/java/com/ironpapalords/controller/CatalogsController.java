@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ironpapalords.model.Cliente;
-import com.ironpapalords.service.ClientesService;
+import com.ironpapalords.service.ClienteService;
 
 @RestController("/catalogs/v1")
 public class CatalogsController {
 
 	@Autowired
-	ClientesService clienteService;
+	ClienteService clienteService;
 
 	@GetMapping("/clientes")
 	List<Cliente> getAll() {

@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.ironpapalords.model.Cliente;
 
-public interface ClientesService {
+public interface ClienteService {
 
 	List<Cliente> getAllClients();
 	
@@ -13,4 +13,5 @@ public interface ClientesService {
 	Cliente findByRfc(String rfc);
 
 	Cliente guardaCliente(Cliente cliente);
+
 }
