@@ -15,7 +15,7 @@ import com.ironpapalords.model.Rol;
 import com.ironpapalords.repository.RolRepository;
 
 @RestController
-public class RoleController {
+public class RolController {
 
 	@Autowired
 	RolRepository roleRepo;

@@ -6,10 +6,8 @@ import com.ironpapalords.model.Usuario;
 
 public interface UsuarioService {
 
-    Usuario save(Usuario user);
-
     List<Usuario> findAll();
 
-    Usuario findOne(String username);
+    List<Usuario> findById(String idUsuario);
 
 }

@@ -12,7 +12,7 @@ import com.ironpapalords.model.Cliente;
 import com.ironpapalords.service.ClienteService;
 
 @RestController("/catalogs/v1")
-public class CatalogsController {
+public class CatalogosController {
 
 	@Autowired
 	ClienteService clienteService;

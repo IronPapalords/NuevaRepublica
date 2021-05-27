@@ -23,10 +23,6 @@ public class Tarea implements Serializable {
 	@Column(name = "NOMBRE", nullable = false, length = 50)
 	private String nombre;
 
-	//bi-directional many-to-one association to ProcesoVsTarea
-	@OneToMany(mappedBy = "tarea", fetch = FetchType.EAGER)
-	private List<ProcesoTarea> procesoTareas;
-
 	//bi-directional many-to-one association to Seccion
 	@OneToMany(mappedBy = "tarea", fetch = FetchType.EAGER)
 	private List<Seccion> secciones;

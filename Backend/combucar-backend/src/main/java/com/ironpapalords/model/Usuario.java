@@ -28,10 +28,6 @@ public class Usuario implements Serializable {
 	@Column(name = "ULTIMO_PASSWORD", nullable = false)
 	private Date ultimoPassword;
 
-	//bi-directional many-to-one association to Operador
-	@OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER)
-	private List<Operador> operadores;
-
 	//bi-directional many-to-one association to Rol
 	@ManyToOne
 	@JoinColumn(name = "ID_ROL", nullable = false)

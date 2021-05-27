@@ -44,8 +44,4 @@ public class Operacion implements Serializable {
 	@JoinColumn(name = "ID_UNIDAD", nullable = false)
 	private Unidad unidad;
 
-	//bi-directional many-to-one association to Respuesta
-	@OneToMany(mappedBy = "operacion", fetch = FetchType.EAGER)
-	private List<Respuesta> respuestas;
-
 }

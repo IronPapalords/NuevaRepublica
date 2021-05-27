@@ -23,12 +23,4 @@ public class Proceso implements Serializable {
 	@Column(name = "NOMBRE", length = 50)
 	private String nombre;
 
-	//bi-directional many-to-one association to Operacion
-	@OneToMany(mappedBy = "proceso", fetch = FetchType.EAGER)
-	private List<Operacion> operaciones;
-
-	//bi-directional many-to-one association to ProcesoVsTarea
-	@OneToMany(mappedBy = "proceso", fetch = FetchType.EAGER)
-	private List<ProcesoTarea> procesoTareas;
-
 }

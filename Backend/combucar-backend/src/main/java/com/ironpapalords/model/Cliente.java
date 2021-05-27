@@ -42,9 +42,9 @@ public class Cliente implements Serializable {
 	@JoinColumn(name = "ID_RESPONSABLE")
 	private Responsable responsable;
 
-	//bi-directional many-to-one association to Identificacion
-	@OneToMany(mappedBy = "cliente", fetch = FetchType.EAGER)
-	private List<Identificacion> identificaciones;
+//	//bi-directional many-to-one association to Identificacion
+//	@OneToMany(mappedBy = "cliente", fetch = FetchType.EAGER)
+//	private List<Identificacion> identificaciones;
 
 	//bi-directional many-to-one association to Unidad
 	@OneToMany(mappedBy = "cliente", fetch = FetchType.EAGER)

@@ -29,16 +29,4 @@ public class Contacto implements Serializable {
 	@Column(name = "TELEFONO", length = 10)
 	private String telefono;
 
-	//bi-directional many-to-one association to Cliente
-	@OneToMany(mappedBy = "contacto", fetch = FetchType.EAGER)
-	private List<Cliente> clientes;
-
-	//bi-directional many-to-one association to Operador
-	@OneToMany(mappedBy = "contacto", fetch = FetchType.EAGER)
-	private List<Operador> operadores;
-
-	//bi-directional many-to-one association to Responsable
-	@OneToMany(mappedBy = "contacto", fetch = FetchType.EAGER)
-	private List<Responsable> responsables;
-
 }

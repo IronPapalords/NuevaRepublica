@@ -26,12 +26,8 @@ public class KitConversion implements Serializable {
 	@Column(name = "SERIE_KIT", length = 20)
 	private String serieKit;
 
-	//bi-directional many-to-one association to Cilindro
-	@OneToMany(mappedBy = "kitConversion", fetch = FetchType.EAGER)
-	private List<Cilindro> cilindros;
-
-	//bi-directional many-to-one association to Unidade
-	@OneToMany(mappedBy = "kitConversion", fetch = FetchType.EAGER)
-	private List<Unidad> unidades;
+//	//bi-directional many-to-one association to Cilindro
+//	@OneToMany(mappedBy = "kitConversion", fetch = FetchType.EAGER)
+//	private List<Cilindro> cilindros;
 
 }

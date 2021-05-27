@@ -49,8 +49,8 @@ public class Operador implements Serializable {
 	@JoinColumn(name = "ID_USUARIO", nullable = false)
 	private Usuario usuario;
 
-	//bi-directional many-to-one association to Respuesta
-	@OneToMany(mappedBy = "operador", fetch = FetchType.EAGER)
-	private List<Respuesta> respuestas;
+//	//bi-directional many-to-one association to Respuesta
+//	@OneToMany(mappedBy = "operador", fetch = FetchType.EAGER)
+//	private List<Respuesta> respuestas;
 
 }

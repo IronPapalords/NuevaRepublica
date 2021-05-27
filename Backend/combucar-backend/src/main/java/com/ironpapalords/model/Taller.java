@@ -26,12 +26,8 @@ public class Taller implements Serializable {
 	@Column(name = "NOMBRE", length = 100)
 	private String nombre;
 
-	//bi-directional many-to-one association to Operacion
-	@OneToMany(mappedBy = "taller", fetch = FetchType.EAGER)
-	private List<Operacion> operaciones;
-
-	//bi-directional many-to-one association to Operador
-	@OneToMany(mappedBy = "taller", fetch = FetchType.EAGER)
-	private List<Operador> operadores;
+//	//bi-directional many-to-one association to Operacion
+//	@OneToMany(mappedBy = "taller", fetch = FetchType.EAGER)
+//	private List<Operacion> operaciones;
 
 }
