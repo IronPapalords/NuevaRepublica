@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { SharedModule } from '../shared/shared.module';
 import { FormatosModule } from '../components/formatos/formatos.module';
 import { InicioComponent } from './inicio/inicio.component';
+import { HelpersModule } from '../helpers/helpers.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { InicioComponent } from './inicio/inicio.component';
     ProtectedRoutingModule,
     FormatosModule,
     SharedModule,
+    HelpersModule
   ],
   exports: [
     HomeComponent

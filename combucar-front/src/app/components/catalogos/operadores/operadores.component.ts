@@ -10,8 +10,10 @@ import Swal from 'sweetalert2';
 
 export class OperadoresComponent implements OnInit {
 
+  titulo: string = 'Alta de Operadores';
+
   operadoresForm: FormGroup = this.fb.group({
-    nombre:         ['', Validators.required, Validators.maxLength(150)],
+    nombre:         ['', Validators.required],
     puesto:         ['']
   });
 

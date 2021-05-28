@@ -1,15 +1,14 @@
 
-        <div class="text-center">
+        <div class="text-center formBlack">
             <h5>Estado Sistema Eléctrico</h5>
         </div>
-        <div class="row" [formGroup]="preconversionForm">
+        <div class="row formBlack" [formGroup]="preconversionForm">
             <div class="col-sm-12 col-md-6 ">
-                <div class="row row-cols-5" >
+                <div class="row row-cols-4" >
                     <div class="col-4 border text-center"> Estado de bateria </div>
                     <div class="col-3 border text-center"> Medición </div>
                     <div class="col-3 border text-center"> Parámetro </div>
-                    <div class="col-1 border text-center"> B </div>
-                    <div class="col-1 border text-center"> M </div>
+                    <div class="col-1 border text-center"> B/M </div>
             
                     <div class="col-4 border">Voltaje nominal</div>
                     <div class="col-3 border">
@@ -17,137 +16,102 @@
                         <!-- <input type="text" class="form-control" formControlName="voltajenominal" minlength="1" placeholder="Voltaje nominal" [class.is-invalid]="preconversionForm.controls?.voltajenominal?.errors" />  -->
                     </div>
                     <div class="col-3 border">12,41-12.72v</div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                        <div class="form-check">                             
+                    <div class="col-1 border centerDiv"> 
+                        <app-switch [parent]="preconversionForm" name="voltajenominalcheck"></app-switch>
+                        <!-- <div class="form-check">                             
                             <input class="form-check-input" type="radio" formControlName="voltajenominalcheck" value="B" id="flexRadioDefault1"> 
-                        </div>  
+                        </div>   -->
                     </div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center">  
+                    <!-- <div class="col-1 border centerDiv">  
                         <div class="form-check"> <input class="form-check-input" type="radio" formControlName="voltajenominalcheck" value="M" id="flexRadioDefault1"> </div>
-                    </div>
-
+                    </div> -->
 
                     <div class="col-4 border">Tensión de esfuerzo</div>
                     <div class="col-3 border"><input type="text" class="form-control" formControlName="tensionesfuerzo" minlength="1" placeholder="Tensión de esfuerzo" [class.is-invalid]="preconversionForm.controls?.tensionesfuerzo?.errors" /> </div>
                     <div class="col-3 border">min 10.0v</div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="tensionesfuerzocheck" value="B" id="flexRadioDefault1"> </div>  
-                    </div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center">  
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="tensionesfuerzocheck" value="M" id="flexRadioDefault1"> </div>
+                    <div class="col-1 border centerDiv"> 
+                        <app-switch [parent]="preconversionForm" name="tensionesfuerzocheck"></app-switch>
                     </div>
 
                     <div class="col-4 border">Tiempo de recuperación</div>
                     <div class="col-3 border"><input type="text" class="form-control" formControlName="tiemporecuperacion" minlength="1" placeholder="Tiempo de recuperación" [class.is-invalid]="preconversionForm.controls?.tiemporecuperacion?.errors" /> </div>
                     <div class="col-3 border">máx. 1min</div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="tiemporecuperacioncheck" value="B" id="flexRadioDefault1"> </div>  
-                    </div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center">  
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="tiemporecuperacioncheck" value="M" id="flexRadioDefault1"> </div>
+                    <div class="col-1 border centerDiv"> 
+                        <app-switch [parent]="preconversionForm" name="tiemporecuperacioncheck"></app-switch>
                     </div>
 
                     <div class="col-4 border">Nivel de liquido</div>
                     <div class="col-3 border"><input type="text" class="form-control" formControlName="nivelliquido" minlength="1" placeholder="Nivel de liquido" [class.is-invalid]="preconversionForm.controls?.nivelliquido?.errors" /> </div>
                     <div class="col-3 border">máx. 1min</div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="nivelliquidocheck" value="B" id="flexRadioDefault1"> </div>  
-                    </div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center">  
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="nivelliquidocheck" value="M" id="flexRadioDefault1"> </div>
+                    <div class="col-1 border centerDiv"> 
+                        <app-switch [parent]="preconversionForm" name="nivelliquidocheck"></app-switch>
                     </div>
 
                     <div class="col-4 border">Densidad</div>
                     <div class="col-3 border"><input type="text" class="form-control" formControlName="densidad" minlength="1" placeholder="Densidad" [class.is-invalid]="preconversionForm.controls?.densidad?.errors" /> </div>
                     <div class="col-3 border">máx. 1min</div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="densidadcheck" value="B" id="flexRadioDefault1"> </div>  
-                    </div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center">  
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="densidadcheck" value="M" id="flexRadioDefault1"> </div>
-                    </div>
+                    <div class="col-1 border centerDiv"> 
+                        <app-switch [parent]="preconversionForm" name="densidadcheck"></app-switch>
+                    </div>                    
                 </div>
 
                 <div class="row row-cols-4">
 
                     <div class="col-4 border">Estado de carcasa</div>
                     <div class="col-6 border">Revisar continuidad</div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="estadocarcasacheck" value="B" id="flexRadioDefault1"> </div>  
-                    </div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center">  
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="estadocarcasacheck" value="M" id="flexRadioDefault1"> </div>
+                    <div class="col-1 border centerDiv"> 
+                        <app-switch [parent]="preconversionForm" name="estadocarcasacheck"></app-switch>
                     </div>
 
                     <div class="col-4 border">Anclaje</div>
                     <div class="col-6 border">Revisar que la bateria este fija</div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="anclajecheck" value="B" id="flexRadioDefault1"> </div>  
-                    </div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center">  
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="anclajecheck" value="M" id="flexRadioDefault1"> </div>
+                    <div class="col-1 border centerDiv"> 
+                        <app-switch [parent]="preconversionForm" name="anclajecheck"></app-switch>
                     </div>
 
                     <div class="col-4 border">Terminal cables de bateria</div>
                     <div class="col-6 border">Que esten soldados al cable de bateria</div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="termcablebateriacheck" value="B" id="flexRadioDefault1"> </div>  
-                    </div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center">  
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="termcablebateriacheck" value="M" id="flexRadioDefault1"> </div>
+                    <div class="col-1 border centerDiv"> 
+                        <app-switch [parent]="preconversionForm" name="termcablebateriacheck"></app-switch>
                     </div>
 
                     <div class="col-4 border">Bome</div>
                     <div class="col-6 border">Que esten soldados al cable de bateria</div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="bomecheck" value="B" id="flexRadioDefault1"> </div>  
-                    </div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center">  
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="bomecheck" value="M" id="flexRadioDefault1"> </div>
+                    <div class="col-1 border centerDiv"> 
+                        <app-switch [parent]="preconversionForm" name="bomecheck"></app-switch>
                     </div>
 
                     <div class="col-4 border">Cables de bateria</div>
                     <div class="col-6 border">Que no halla falso contacto</div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="cablebateriacheck" value="B" id="flexRadioDefault1"> </div>  
+                    <div class="col-1 border centerDiv"> 
+                        <app-switch [parent]="preconversionForm" name="cablebateriacheck"></app-switch>
                     </div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center">  
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="cablebateriacheck" value="M" id="flexRadioDefault1"> </div>
-                    </div>
-
                 </div>
             </div>
 
             <div class="d-xs-none col-md-1 ml-0"></div>
 
             <div class="col-sm-12 col-md-5 margenr">
-                <div class="row row-cols-5">
+                <div class="row row-cols-4">
                     <div class="col-4 border text-center"> Estado Motor de arranque </div>
                     <div class="col-3 border text-center"> Medición </div>
                     <div class="col-3 border text-center"> Parametro </div>
-                    <div class="col-1 border text-center"> B </div>
-                    <div class="col-1 border text-center"> M </div>
+                    <div class="col-2 border text-center"> B/M </div>
             
                     <div class="col-4 border">Intensidad en arranque </div>
                     <div class="col-3 border">  </div>
                     <div class="col-3 border">Ver cuadro 1.1  </div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="intensidadarranque" value="B" id="flexRadioDefault1"> </div>  
-                    </div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center">  
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="intensidadarranque" value="M" id="flexRadioDefault1"> </div>
-                    </div>
+                    <div class="col-2 border centerDiv"> 
+                        <app-switch [parent]="preconversionForm" name="intensidadarranque"></app-switch>
+                    </div>                    
                 </div>
 
                 <div class="row row-cols-4">
                     <div class="col-4 border">Estado de arranque </div>
                     <div class="col-6 border">Que no este arrastrando el inducido</div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="estadoarranque" value="B" id="flexRadioDefault1"> </div>  
-                    </div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center">  
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="estadoarranque" value="M" id="flexRadioDefault1"> </div>
-                    </div>
+                    <div class="col-2 border centerDiv"> 
+                        <app-switch [parent]="preconversionForm" name="estadoarranque"></app-switch>
+                    </div>                    
                 </div>
                 <div class="row">
                     <div class="col text-left">REALIZAR PRUEBAS DE INTENSIDAD SOLO SI SE DETECTAN PROBLEMAS</div>
@@ -159,28 +123,21 @@
                     <div class="col-4 border text-center"> Sistema de carga </div>
                     <div class="col-3 border text-center"> Medición </div>
                     <div class="col-3 border text-center"> Parametro </div>
-                    <div class="col-1 border text-center"> B </div>
-                    <div class="col-1 border text-center"> M </div>
+                    <div class="col-2 border text-center"> B/M </div>
             
                     <div class="col-4 border">Tensión de carga en ralentí</div>
                     <div class="col-3 border"> <app-input [parent]="preconversionForm" nameInput="tensioncarga" placeholder="Tensión ralentí"></app-input> </div>
                     <div class="col-3 border">13.5 - 14.7</div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="tensioncargacheck" value="B" id="flexRadioDefault1">  </div>  
-                    </div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center">  
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="tensioncargacheck" value="M" id="flexRadioDefault1"> </div>
+                    <div class="col-2 border centerDiv"> 
+                        <app-switch [parent]="preconversionForm" name="tensioncargacheck"></app-switch>
                     </div>
 
                     <div class="col-4 border">Tensión de carga crucero</div>
                     <div class="col-3 border"><app-input [parent]="preconversionForm" nameInput="tensioncargacrucero" placeholder="Tensión crucero"></app-input> </div>
                     <div class="col-3 border">13.5 - 14.7v</div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="tensioncargacrucerocheck" value="B" id="flexRadioDefault1"> </div>  
-                    </div>
-                    <div class="col-1 border d-flex justify-content-center align-items-center">  
-                        <div class="form-check"> <input class="form-check-input" type="radio" formControlName="tensioncargacrucerocheck" value="M" id="flexRadioDefault1"> </div>
-                    </div>
+                    <div class="col-2 border centerDiv"> 
+                        <app-switch [parent]="preconversionForm" name="tensioncargacrucerocheck"></app-switch>
+                    </div>                    
                 </div>
                 
                 <div class="row"><div class="col-12">&nbsp;</div></div>
@@ -205,11 +162,6 @@
             </div>
         </div>
 
-
-<div class="row">
-    <div class="col-12">
-        <button type="button" (click)="selectTab(3)" class="btn btn-outline-primary btn-block float-end">
-            Siguiente
-        </button>
-    </div>
+<div style="padding: 42px; text-align: center;">
+    <app-button type="button" desc="Siguiente" estilo="shadow" (onClick)="selectTab(3)" [isDisabled]="false"></app-button>
 </div>

@@ -1,6 +1,4 @@
-<hr>
-<h4>Alta de Operadores </h4>
-<hr>
+<app-title [titulo]="titulo"></app-title>
 
 <form (ngSubmit)="guardar()" [formGroup]="operadoresForm">
 
@@ -9,9 +7,9 @@
         <div class="form-group row">
             <label class="col-2 col-form-label">Nombre</label>
             <div class="col-8">
-
-                <input class="form-control" type="text" placeholder="Nombre" formControlName="nombre" [class.is-invalid]="operadoresForm.controls.errors">
-                <small class="text-danger" *ngIf="campoEsValido('nombre')">Ingrese el nombre del Operador</small>
+                <app-input [parent]="operadoresForm" nameInput="nombre" placeholder="Nombre"></app-input>
+                <!-- <input class="form-control" type="text" placeholder="Nombre" formControlName="nombre" [class.is-invalid]="operadoresForm.controls.errors">
+                <small class="text-danger" *ngIf="campoEsValido('nombre')">Ingrese el nombre del Operador</small> -->
             </div>
         </div>
 
@@ -31,9 +29,10 @@
     <div class="form-group row">
         <label class="col-2 col-form-label">&nbsp;</label>
         <div class="input-group col-md-8">
-            <button type="submit" class="btn btn-outline-primary btn-block">
+            <!-- <button type="submit" class="btn btn-outline-primary btn-block">
                 Guardar
-            </button>
+            </button> -->
+            <app-button [parent]="operadoresForm" type="submit" desc="Guardar" estilo="my-1" [isDisabled]="operadoresForm.invalid"></app-button>
         </div>
     </div>
 

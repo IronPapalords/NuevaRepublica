@@ -1,6 +1,7 @@
 <div class="container">
 
     <app-title [titulo]="title"></app-title>
+    
     <div class="row mt-3">
         <div class="col">
             <form (ngSubmit)="guardar()" [formGroup]="conversionForm">
@@ -9,13 +10,14 @@
 
                         <label class="col-4 text-right col-form-label font-weight-light">No DE VIN</label>
                         <div class="col">                        
-                            <input 
+                            <!-- <input 
                                 type="text"
                                 class="form-control"
                                 formControlName="numerovin"
                                 maxlength="17"
                                 placeholder="Ingresar el numero vin"        
-                                />
+                                /> -->
+                            <app-input [parent]="conversionForm" nameInput="numerovin" placeholder="Ingresar el numero vin"></app-input>
                         </div>
                     </div>
                 </div>
@@ -41,148 +43,119 @@
 
                             <label class="w-100 col-form-label text-start">Mecánica:</label>
                             <div class="col-sm-9">
-                                <input 
+                                <!-- <input 
                                     type="text"
                                     class="form-control"
                                     formControlName="mecanica"
                                     placeholder="Mecanica"        
-                                    />
+                                /> -->
+                                <app-input [parent]="conversionForm" nameInput="mecanica" placeholder="Mecanica"></app-input>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="d-block">
                                 <label class="w-100 col-form-label text-start"><small>Linea y Frente:</small> </label>
-                                <input 
+                                <!-- <input 
                                     type="text"
                                     class="form-control form-control-sm w-100"
                                     formControlName="lineayfrente"
-                                    placeholder="Ingresar linea y frente"        
-                                    />
+                                    placeholder="Ingresar linea y frente"
+                                /> -->
+                                <app-input [parent]="conversionForm" nameInput="lineayfrente" placeholder="Ingresar linea y frente"></app-input>
                             </div>
                             <div class="d-block">
                                 <label class="w-100 col-form-label text-start">Perforación:</label>
-                                <input 
+                                <!-- <input 
                                     type="text"
                                     class="form-control form-control-sm"
                                     formControlName="perforacion"
                                     placeholder="Ingresar perforacion"        
-                                />
+                                /> -->
+                                <app-input [parent]="conversionForm" nameInput="perforacion" placeholder="Ingresar perforacion"></app-input>
                             </div>
                             <div class="d-block">
                                 <label class="w-100 col-form-label text-start">Cilindros:</label>
-                                <input 
+                                <app-input [parent]="conversionForm" nameInput="cilindros" placeholder="Ingresar cilindros"></app-input>
+                                <!-- <input 
                                     type="text"
                                     class="form-control form-control-sm"
                                     formControlName="cilindros"
-                                    placeholder="Ingresar cilindros"        
-                                    />
+                                    placeholder="Ingresar cilindros"
+                                    /> -->
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-5">
+                    <div class="row mt-5 px-0">
                         <div class="col-6 border">
                             REVISION
                                 <div class="row">
-                                    <div class="col"> Calibración </div>
-                                    <div class="col">
-                                        <div class="form-check form-switch">
-                                            <label class="form-check-label" for="flexRadioDefault1">Si</label>
-                                            <input class="form-check-input" formControlName="calibracion" type="checkbox" id="flexRadioDefault1">
-                                        </div>
+                                    <div class="col justify-between">
+                                        <div>Calibración</div>
+                                        <app-switch [parent]="conversionForm" name="calibracion"></app-switch>                                        
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col"> Anticongelante                                    </div>
-                                    <div class="col">
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" formControlName="anticongelante" type="checkbox" id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">Si</label>
-                                        </div>
+                                    <div class="col justify-between">
+                                        <div>Anticongelante</div>
+                                        <app-switch [parent]="conversionForm" name="anticongelante"></app-switch>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col"> Fugas de agua </div>
-                                    <div class="col">
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" formControlName="fugasagua" type="checkbox" id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">Si</label>
-                                        </div>                                        
+                                    <div class="col justify-between">
+                                        <div>Fugas de agua</div>
+                                        <app-switch [parent]="conversionForm" name="fugasagua"></app-switch>                                        
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col"> Herramienta </div>
-                                    <div class="col">
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" formControlName="herramienta" type="checkbox" id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">Si</label>
-                                        </div>
+                                    <div class="col justify-between">
+                                        <div>Herramienta</div>
+                                        <app-switch [parent]="conversionForm" name="herramienta"></app-switch>                                        
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col"> Limpieza </div>
-                                    <div class="col">
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" formControlName="limpieza" type="checkbox" id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">Si</label>
-                                        </div>
+                                    <div class="col justify-between">
+                                        <div>Limpieza </div>
+                                        <app-switch [parent]="conversionForm" name="limpieza"></app-switch>                                        
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col"> Funcionamiento </div>
-                                    <div class="col">
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" formControlName="funcionamiento" type="checkbox" id="flexRadioDefault1">
-                                            <label class="form-check-label " for="flexRadioDefault1">Si</label>
-                                        </div>
+                                    <div class="col justify-between">
+                                        <div>Funcionamiento </div>
+                                        <app-switch [parent]="conversionForm" name="funcionamiento"></app-switch>                                        
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col"> Soporte de bateria </div>
-                                    <div class="col">
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" formControlName="soporteBateria" type="checkbox" id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">Si</label>
-                                        </div>
+                                    <div class="col justify-between">
+                                        <div> Soporte de bateria </div>
+                                        <app-switch [parent]="conversionForm" name="soporteBateria"></app-switch>                                        
                                     </div>
                                 </div>
                         </div>
                         <!-- CILINDROS -->
-                        <div class="col-6 border">
+                        <div class="col-6 border pl-1">
                             REVISION
-                            <div class="row">
-                                <div class="col"> Instalacion </div>
-                                <div class="col">
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" formControlName="instalacion" type="checkbox" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">Si</label>
-                                    </div>                                    
+                            <div class="row">                                
+                                <div class="col justify-between">
+                                    <div> Instalación </div>
+                                    <app-switch [parent]="conversionForm" name="instalacion"></app-switch>                                    
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col"> Fugas de gas </div>
-                                <div class="col">
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" formControlName="fugasGasCilindros" type="checkbox" id="flexRadioDefault1">
-                                        <label class="form-check-label " for="flexRadioDefault1">Si</label>
-                                    </div>                                    
+                                <div class="col justify-between">
+                                    <div>Fugas de gas</div>
+                                    <app-switch [parent]="conversionForm" name="fugasGasCilindros"></app-switch>
                                 </div>
                             </div>                       
                             <div class="row">
-                                <div class="col"> Herramienta </div>
-                                <div class="col">
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" formControlName="herramientaCilindros" type="checkbox" id="flexRadioDefault1">
-                                        <label class="form-check-label " for="flexRadioDefault1">Si</label>
-                                    </div>                                    
+                                <div class="col justify-between">
+                                    <div>Herramienta</div>
+                                    <app-switch [parent]="conversionForm" name="herramientaCilindros"></app-switch>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col"> Limpieza  </div>
-                                <div class="col">
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" formControlName="limpiezaCilindros" type="checkbox" id="flexRadioDefault1">
-                                        <label class="form-check-label " for="flexRadioDefault1">Si</label>
-                                    </div>                                    
+                                <div class="col justify-between">
+                                    <div > Limpieza  </div>
+                                    <app-switch [parent]="conversionForm" name="limpiezaCilindros"></app-switch>
                                 </div>
                             </div>
 
@@ -215,11 +188,7 @@
                         </div>
                     </div>
                 </div>
-
-                <button type="submit" class="btn btn-primary mt-5 float-end"
-                        [disabled]="conversionForm.invalid">
-                        Guardar
-                </button>
+                <app-button [parent]="conversionForm" type="submit" desc="Guardar conversion" estilo="my-3" [isDisabled]="conversionForm.invalid"></app-button>
             </form>
         </div>
     </div>
@@ -227,7 +196,9 @@
 
 
 
-<!-- <h6>Formulario Valido</h6>
+<h6>Formulario Valido</h6>
 <pre>{{ conversionForm.valid }}</pre>
 <h6>Valores Formulario Conversion</h6>
-<pre>{{ conversionForm.value | json }}</pre> -->
+<code>
+    <pre>{{ conversionForm.value | json }}</pre>
+</code>

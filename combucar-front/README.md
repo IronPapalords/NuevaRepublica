@@ -43,9 +43,9 @@ http://localhost:3001
 
 
 ## CREAR TAG DE IMAGEN y SUBIR A DOCKER HUB
-`docker tag combucar-front dobok1/combucar-front:v7`
+`docker tag combucar-front dobok1/combucar-front:v8`
 
-`docker push dobok1/combucar-front:v7`
+`docker push dobok1/combucar-front:v8`
 
 
 ## Template de bootstrap

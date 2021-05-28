@@ -1,0 +1,13 @@
+
+<div [formGroup]="parent" *ngIf="type === 'submit'">
+    <button [type]="type" [ngClass]="'btn btn-primary ' + estilo" [disabled]="isDisabled"> {{desc}} </button>
+</div>
+
+<div *ngIf="type === 'button'">
+    <button [type]="type" [ngClass]="'btn btn-primary ' + estilo" [disabled]="isDisabled" (click)="onClickButton($event)"> {{desc}} </button>
+</div>
+
+<div *ngIf="type === 'icon'">
+    <div  (click)="onClickButton($event)"> <i [class]="'bi ' + estilo"></i> </div>
+    <h3>{{desc}}</h3>
+</div>

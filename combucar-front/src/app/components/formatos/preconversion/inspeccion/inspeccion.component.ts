@@ -10,6 +10,8 @@ import { TabsetComponent } from 'ngx-bootstrap/tabs';
 })
 export class InspeccionComponent implements OnInit {
 
+  title: string= 'Inspección visual preliminar';
+
   @Input() staticTabs!: TabsetComponent;
   @Input() preconversionForm!: FormGroup;
 

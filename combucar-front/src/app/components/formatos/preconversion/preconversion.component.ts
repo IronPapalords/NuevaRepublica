@@ -14,7 +14,9 @@ export class PreconversionComponent implements OnInit {
 
   title: string = 'PRE-CONVERSIÓN';
   value: string = '';
-  toogleCliente: boolean = false;
+  toggleCliente: boolean = false;
+  toggleAddCliente: boolean = false;
+  toggleUnidad: boolean = false;
   
   preconversionForm: FormGroup = this.fb.group({
 
@@ -119,8 +121,6 @@ export class PreconversionComponent implements OnInit {
     masamodulardist:         [''],
     masamodulardistcheck:    [''],
 
-    
-
   })
   
 
@@ -129,19 +129,21 @@ export class PreconversionComponent implements OnInit {
 
   }
 
-  /* validaPreconversion() {
-    console.log(this.staticTabs.tabs);
-  } */
-
-  /* selectTab(tabId: number) {
-    console.log('El tab  ', this.staticTabs.tabs[tabId]);
-    console.log('El tab seleccionado es ', this.staticTabs.tabs[tabId].active);
-    this.staticTabs.tabs[tabId].active = true;
-  } */
-
-  buscarcliente () {
-    this.toogleCliente = !this.toogleCliente;
+  showCliente(event: any) {
+    this.toggleCliente = !this.toggleCliente;
+    this.toggleUnidad = false;
   }
+
+  showUnidad(event: any) {
+    this.toggleUnidad = !this.toggleUnidad;
+    this.toggleCliente = false;
+  }
+
+  showAgregarCliente() {
+    this.toggleAddCliente = !this.toggleAddCliente;
+  }
+
+  
   
   onSelectTab(data: TabDirective) {
     this.value = data.heading;

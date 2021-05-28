@@ -1,165 +1,93 @@
-<div class="text-center">
+<div class="text-center formBlack">
     <h5>Inspección visual preliminar</h5>
 </div>
-<div class="row" [formGroup]="preconversionForm">
+
+<div class="row formBlack" [formGroup]="preconversionForm">
     <div class="col-sm-12 col-md-6" >
                     <div class="row row-cols-3" >
                         <div class="col-4 border text-center"> ESTADO VISUAL </div>
                         <div class="col-6 border text-center"> CAUSA / REVISION </div>
-                        <div class="col-1 border text-center"> B </div>
-                        <div class="col-1 border text-center"> M </div>
+                        <div class="col-1 border text-center"> B/M </div>
+                        <!-- <div class="col-1 border text-center"> M </div> -->
                    
                         <div class="col-4 border"> Humo azul por exosto </div>
                         <div class="col-6 border"> Consumo aceite de combustible </div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                            <div class="form-check">
-                            <!--     <app-radio [parent]="preconversionForm" nameRadio="flexRadio1" valor="B" id="flexRadioDefault1"></app-radio> -->
+                        <div class="col-1 border centerDiv"> 
+                            <app-switch [parent]="preconversionForm" name="flexRadio1"></app-switch>
+                            <!-- <div class="form-check">
                                     <input class="form-check-input" type="radio" formControlName="flexRadio1" value="B" id="flexRadioDefault1">
-                            </div>
+                            </div> -->
                         </div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center">  
+                        <!-- <div class="col-1 border centerDiv">  
                             <div class="form-check">
-                                <!-- <app-radio [parent]="preconversionForm" nameRadio="flexRadio1" valor="M" id="flexRadioDefault2"></app-radio> -->
                                 <input class="form-check-input" type="radio" formControlName="flexRadio1" value="M" id="flexRadioDefault2">
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="col-4 border">Humo negro por exosto</div>
                         <div class="col-6 border">Alto consumo de combustible</div>
-                        
-                        <app-radio [parent]="preconversionForm" nameRadio="flexRadio2" valor1="B" valor2="M" id="flexRadioDefault3" class="w-auto"></app-radio>
-
-                        
+                        <div class="col-1 border centerDiv"> 
+                            <app-switch [parent]="preconversionForm" name="flexRadio2"></app-switch>
+                        </div>
 
                         <div class="col-4 border">Fuga de aceite</div>
                         <div class="col-6 border">Por empaques y retenedores</div>
-
-                        <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio3" value="B" id="flexRadioDefault1">
-                            </div>  
-                        </div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center">  
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio3" value="M" id="flexRadioDefault1">
-                            </div>
+                        <div class="col-1 border centerDiv"> 
+                            <app-switch [parent]="preconversionForm" name="flexRadio3"></app-switch>                            
                         </div>
 
                         <div class="col-4 border">Nivel de aceite</div>
                         <div class="col-6 border">Verifiar el nivel de aceite del motor</div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio4" value="B" id="flexRadioDefault1">
-                            </div>  
-                        </div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center">  
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio4" value="M" id="flexRadioDefault1">
-                            </div>
+                        <div class="col-1 border centerDiv"> 
+                            <app-switch [parent]="preconversionForm" name="flexRadio4"></app-switch>
                         </div>
 
                         <div class="col-4 border">Estado de filtro de aire</div>
                         <div class="col-6 border">Que se encuentre buen estado y limpio</div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio5" value="B" id="flexRadioDefault1">
-                            </div>  
-                        </div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center">  
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio5" value="M" id="flexRadioDefault1">
-                            </div>
+                        <div class="col-1 border centerDiv"> 
+                            <app-switch [parent]="preconversionForm" name="flexRadio5"></app-switch>
                         </div>
 
                         <div class="col-4 border">Nivel de aceite caja aut.</div>
                         <div class="col-6 border">Revisar nivel</div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio6" value="B" id="flexRadioDefault1">
-                            </div>  
-                        </div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center">  
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio6" value="M" id="flexRadioDefault1">
-                            </div>
+                        <div class="col-1 border centerDiv">
+                            <app-switch [parent]="preconversionForm" name="flexRadio6"></app-switch>
                         </div>
 
                         <div class="col-4 border">Prueba de ruta</div>
                         <div class="col-6 border">Desempeño en ruta/cambios en vehic. Aut.</div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio7" value="B" id="flexRadioDefault1">
-                            </div>  
-                        </div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center">  
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio7" value="M" id="flexRadioDefault1">
-                            </div>
+                        <div class="col-1 border centerDiv">
+                            <app-switch [parent]="preconversionForm" name="flexRadio7"></app-switch>
                         </div>
 
                         <div class="col-4 border">Mezcla Agua - aceite</div>
                         <div class="col-6 border">Revisar emulsion en radiador, tapa de aceite y aceite</div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio8" value="B" id="flexRadioDefault1">
-                            </div>  
-                        </div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center">  
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio8" value="M" id="flexRadioDefault1">
-                            </div>
+                        <div class="col-1 border centerDiv">
+                            <app-switch [parent]="preconversionForm" name="flexRadio8"></app-switch>                            
                         </div>
 
                         <div class="col-4 border">Relenti</div>
                         <div class="col-6 border">Comportamiento en ralenti</div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio9" value="B" id="flexRadioDefault1">
-                            </div>  
-                        </div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center">  
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio9" value="M" id="flexRadioDefault1">
-                            </div>
+                        <div class="col-1 border centerDiv">
+                            <app-switch [parent]="preconversionForm" name="flexRadio9"></app-switch>
                         </div>
 
                         <div class="col-4 border">Aceleracion</div>
                         <div class="col-6 border">Comportamiento al acelerar a fondo</div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio10" value="B" id="flexRadioDefault1">
-                            </div>  
-                        </div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center">  
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio10" value="M" id="flexRadioDefault1">
-                            </div>
+                        <div class="col-1 border centerDiv"> 
+                            <app-switch [parent]="preconversionForm" name="flexRadio10"></app-switch>
                         </div>
 
                         <div class="col-4 border">Cuerpo de aceleracion</div>
                         <div class="col-6 border">Sucio, fugas, suelto, etc...</div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio11" value="B" id="flexRadioDefault1">
-                            </div>  
-                        </div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center">  
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio11" value="M" id="flexRadioDefault1">
-                            </div>
+                        <div class="col-1 border centerDiv"> 
+                            <app-switch [parent]="preconversionForm" name="flexRadio11"></app-switch>
                         </div>
 
                         <div class="col-4 border">Fugas de vacio</div>
                         <div class="col-6 border">Mangueras, booster, mangueras puertas, PCV</div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center"> 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio12" value="B" id="flexRadioDefault1">
-                            </div>  
-                        </div>
-                        <div class="col-1 border d-flex justify-content-center align-items-center">  
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="flexRadio12" value="M" id="flexRadioDefault1">
-                            </div>
+                        <div class="col-1 border centerDiv">
+                            <app-switch [parent]="preconversionForm" name="flexRadio12"></app-switch>
                         </div>
                     </div>
                      
@@ -186,13 +114,13 @@
                 <div class="col-4 border">Estado</div>
                 <div class="col-5 border">Observación</div>
                 <div class="col-2 border"></div>
-                <div class="col-1 border d-flex justify-content-center align-items-center">B</div>
+                <div class="col-1 border centerDiv">B</div>
             </div>
             <div class="row">
                 <div class="col-4 border">Chasis o baúl.</div>
                 <div class="col-5 border">Revisar estado piso y chasis</div>
                 <div class="col-2 border"></div>
-                <div class="col-1 border d-flex justify-content-center align-items-center">
+                <div class="col-1 border centerDiv">
                     <div class="form-check">
                         <!-- <input class="form-check-input" type="radio" formControlName="flexRadio12" value="M" id="flexRadioDefault1"> -->
                     </div>
@@ -252,57 +180,66 @@
             <div class="row"><div class="col-12">&nbsp;</div></div>
             <div class="row ">
                 <div class="col-10 border text-center">Sistema de refrigeración</div>
-                <div class="col-1 border">B</div>
-                <div class="col-1 border">M</div>
+                <div class="col-2 border">B/M</div>
+                <!-- <div class="col-1 border">M</div> -->
             </div>
             <div class="row text-center">
                 <div class="col-10 border">Fuga de agua ( Tapa, radiador, mangueras, tanque recuperador )</div>
-                <div class="col-1 border"><div class="form-check"><input class="form-check-input" type="radio" formControlName="fugaagua" value="B" id="flexRadioDefault1"></div></div>
-                <div class="col-1 border"><div class="form-check"><input class="form-check-input" type="radio" formControlName="fugaagua" value="M" id="flexRadioDefault1"></div></div>
+                <div class="col-2 border"><app-switch [parent]="preconversionForm" name="fugaagua"></app-switch> </div>
+                <!-- <div class="col-1 border"><div class="form-check"><input class="form-check-input" type="radio" formControlName="fugaagua" value="B" id="flexRadioDefault1"></div></div> -->
+                <!-- <div class="col-1 border"><div class="form-check"><input class="form-check-input" type="radio" formControlName="fugaagua" value="M" id="flexRadioDefault1"></div></div> -->
             </div>
             <div class="row text-center">
                 <div class="col-10 border">Estado de mangueras del medidor ( del radiador y complementarias del sistema )</div>
-                <div class="col-1 border"><div class="form-check"><input class="form-check-input" type="radio" formControlName="mangueramedidor" value="B" id="flexRadioDefault1"></div></div>
-                <div class="col-1 border"><div class="form-check"><input class="form-check-input" type="radio" formControlName="mangueramedidor" value="M" id="flexRadioDefault1"></div></div>
+                <div class="col-2 border"><app-switch [parent]="preconversionForm" name="mangueramedidor"></app-switch> </div>
+                <!-- <div class="col-1 border"><div class="form-check"><input class="form-check-input" type="radio" formControlName="mangueramedidor" value="M" id="flexRadioDefault1"></div></div> -->
             </div>
             <div class="row text-center">
                 <div class="col-10 border">Ventiladores (Revisar el fan-cluch, electroventiladores)</div>
-                <div class="col-1 border"><input class="form-check-input" type="radio" formControlName="ventiladores" value="B" id="flexRadioDefault1"></div>
-                <div class="col-1 border"><input class="form-check-input" type="radio" formControlName="ventiladores" value="M" id="flexRadioDefault1"></div>
+                <div class="col-2 border"><app-switch [parent]="preconversionForm" name="ventiladores"></app-switch> </div>
+                <!-- <div class="col-1 border"><input class="form-check-input" type="radio" formControlName="ventiladores" value="M" id="flexRadioDefault1"></div> -->
             </div>
             <div class="row text-center">
                 <div class="col-10 border">Indicador de temperatura ( Que este operando normalmente)</div>
-                <div class="col-1 border"><input class="form-check-input" type="radio" formControlName="indicadortemp" value="B" id="flexRadioDefault1"></div>
-                <div class="col-1 border"><input class="form-check-input" type="radio" formControlName="indicadortemp" value="M" id="flexRadioDefault1"></div>
+                <div class="col-2 border"><app-switch [parent]="preconversionForm" name="indicadortemp"></app-switch> </div>
+                <!-- <div class="col-1 border"><input class="form-check-input" type="radio" formControlName="indicadortemp" value="M" id="flexRadioDefault1"></div> -->
             </div>
             <div class="row text-center">
                 <div class="col-10 border">Enfocador ( Que se encuentre en buenas condiciones )</div>
-                <div class="col-1 border"><input class="form-check-input" type="radio" formControlName="enfocador" value="B" id="flexRadioDefault1"></div>
-                <div class="col-1 border"><input class="form-check-input" type="radio" formControlName="enfocador" value="M" id="flexRadioDefault1"></div>
+                <div class="col-2 border"><app-switch [parent]="preconversionForm" name="enfocador"></app-switch> </div>
+                <!-- <div class="col-1 border"><input class="form-check-input" type="radio" formControlName="enfocador" value="M" id="flexRadioDefault1"></div> -->
             </div>
             <div class="row text-center">
                 <div class="col-10 border">Tanque recuperador de agua y liquido refrigerante</div>
-                <div class="col-1 border"><input class="form-check-input" type="radio" formControlName="tanqueagualiquido" value="B" id="flexRadioDefault1"></div>
-                <div class="col-1 border"><input class="form-check-input" type="radio" formControlName="tanqueagualiquido" value="M" id="flexRadioDefault1"></div>
+                <div class="col-2 border"><app-switch [parent]="preconversionForm" name="tanqueagualiquido"></app-switch> </div>
+                <!-- <div class="col-1 border"><input class="form-check-input" type="radio" formControlName="tanqueagualiquido" value="M" id="flexRadioDefault1"></div> -->
             </div>
             <div class="row text-center">
                 <div class="col-10 border">Nivel de liquido refrigerante</div>
-                <div class="col-1 border"><input class="form-check-input" type="radio" formControlName="nivelliquidoref" value="B" id="flexRadioDefault1"></div>
-                <div class="col-1 border"><input class="form-check-input" type="radio" formControlName="nivelliquidoref" value="M" id="flexRadioDefault1"></div>
+                <div class="col-2 border"><app-switch [parent]="preconversionForm" name="nivelliquidoref"></app-switch> </div>
+                <!-- <div class="col-1 border"><input class="form-check-input" type="radio" formControlName="nivelliquidoref" value="M" id="flexRadioDefault1"></div> -->
             </div>
             <div class="row text-center">
                 <div class="col-10 border">Tapa de radiador</div>
-                <div class="col-1 border"><input class="form-check-input" type="radio" formControlName="taparadiador" value="B" id="flexRadioDefault1"></div>
-                <div class="col-1 border"><input class="form-check-input" type="radio" formControlName="taparadiador" value="M" id="flexRadioDefault1"></div>
+                <div class="col-2 border"><app-switch [parent]="preconversionForm" name="taparadiador"></app-switch> </div>
+                <!-- <div class="col-1 border"><input class="form-check-input" type="radio" formControlName="taparadiador" value="M" id="flexRadioDefault1"></div> -->
             </div>
     </div>
 </div>
 
 
-<div class="row">
+<div style="padding: 42px; text-align: center;">            
+    <!-- <button type="submit" class="btn btn-outline-primary" (click)="selectTab(2)">
+        SIGUIENTE
+    </button>             -->
+
+    <app-button type="button" desc="Siguiente" estilo="shadow" (onClick)="selectTab(2)" [isDisabled]="false"></app-button>
+</div>
+
+<!-- <div class="row">
     <div class="col-12">
         <button type="button" (click)="selectTab(2)" class="btn btn-outline-primary btn-block float-end">
             Siguiente
         </button>
     </div>
-</div>
+</div> -->

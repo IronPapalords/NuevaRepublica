@@ -1,24 +1,25 @@
-<div class="row">
+<div class="row formBlack">
     <div class="col">
         <div class="row">            
-            <div class="col-sm-8 col-xs-8 centerDiv">
+            <!-- <div class="col-sm-8 col-xs-8 centerDiv">
                 <div style="width: 361px;">
                     <app-input [parent]="preconversionForm" nameInput="buscarNombreCliente" placeholder="buscar cliente"></app-input>                                        
                 </div>
                 <div class="mx-3">
                     <app-button type="icon" desc="" estilo="bi-search circleButton shadow iconBlue" (onClick)="buscarCliente($event)" [isDisabled]="false"></app-button>
                 </div>
-            </div>               
-            <div class="col-sm-4 col-xs-4">
-                <app-button type="icon" desc="" estilo="bi-plus-circle-fill circleButton shadow iconBlue" (onClick)="toggleAddCliente($event)" [isDisabled]="false"></app-button>
+            </div>                -->
+            <div class="col-12 centerDiv">
+                <app-button type="icon" desc="" estilo="bi-plus-circle-fill circleButton shadow iconBlue" (onClick)="toggleAddUnidad($event)" [isDisabled]="false"></app-button>
+                <div class="mx-2">Alta Unidad</div>
             </div>
         </div>
     </div>
 </div>
 
 <hr />
-<div class="row formBlack" *ngIf="showAddCliente">
+<div class="row formBlack" *ngIf="showAddUnidad">
     <div class="col shadow ">
-        <app-clientes></app-clientes>
+        <app-alta-unidades></app-alta-unidades>
     </div>
 </div>

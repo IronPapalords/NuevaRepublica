@@ -14,8 +14,7 @@ export class InicioComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  preconversion() {
-    console.log('Funcka ...');
+  preconversion(event: any) {
       this.router.navigateByUrl('/formatos/preconversion');
   }
 

@@ -1,8 +1,8 @@
-<div class="wrapper" style="background: linear-gradient(to bottom right, #143045, #0065b2);">
-    <app-sidebar-menu [toogleMenu]="toogleMenu"></app-sidebar-menu>
+<div class="wrapper gradiente">
+    <app-sidebar-menu [toogleMenu]="toogleMenu" (newToggle)="getToggleValue( $event )"></app-sidebar-menu>
     <div class="main">
         <app-navbar [toogleMenu]="toogleMenu" (newToggle)="getToggleValue( $event )"></app-navbar>
-        <main class="content">
+        <main>
             <div class="container-fluid">
                 <router-outlet></router-outlet>
             </div>

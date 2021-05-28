@@ -1,6 +1,6 @@
 <app-title [titulo]="title"></app-title>
 
-<div class="container" style="background: white; padding: 42px 42px 0px 42px;">
+<div class="container preconversionContainer formBlack">
 
     <form (ngSubmit)="guardarPreconversion()" [formGroup]="preconversionForm">
 
@@ -10,31 +10,47 @@
         <tabset #staticTabs>
             <tab heading="Cliente" (selectTab)="onSelectTab($event)"> 
                 
-                <TABLE style="width: 100%; text-align: center; margin: 40px;">
+                <!-- <TABLE style="width: 100%; text-align: center; margin: 40px;">
                     <TR>
                     <TD>
                         <div style="align-items: center; color:#143045;opacity: 70%; width: 350px; text-align: center;"
-                            (click)="buscarcliente()"
-                        >
+                            (click)="showCliente()">
                             <i class="bi bi-ui-checks" style="font-size: 5rem; color: cornflowerblue;"></i>
                             <h1>Cliente</h1>
                         </div>
                     </TD>
                     <TD>
-                        <div style="align-items: center; color:#143045;opacity: 70%; width: 350px; text-align: center;">
+                        <div style="align-items: center; color:#143045;opacity: 70%; width: 350px; text-align: center;" 
+                            (click)="showUnidad()">
                             <i class="bi bi-arrow-left-right" style="font-size: 5rem; color: cornflowerblue;"></i>
                             <h1>Unidad</h1>
                         </div>
                     </TD>
                     </TR>
-                </TABLE>
-
-                <div *ngIf="toogleCliente">
-                    <app-cliente [preconversionForm]="preconversionForm" [staticTabs]="staticTabs"></app-cliente>
+                </TABLE> -->
+                
+                <div class="row  centerDiv text-center">
+                    <div class="col-6">
+                        <app-button type="icon" desc="Cliente" estilo="bi-ui-checks iconBlue rem5" (onClick)="showCliente($event)" [isDisabled]="false">
+                        </app-button>
+                    </div>
+                    <div class="col-6">
+                        <app-button type="icon" desc="Unidad" estilo="bi-arrow-left-right iconBlue rem5" (onClick)="showUnidad($event)" [isDisabled]="false">
+                        </app-button>
+                    </div>
                 </div>
 
+                <div class="my-3">
 
+                    <div *ngIf="toggleCliente">
+                        <app-cliente [preconversionForm]="preconversionForm" [staticTabs]="staticTabs"></app-cliente>
+                    </div>
+                    <div *ngIf="toggleUnidad">
+                        <app-unidad [preconversionForm]="preconversionForm"></app-unidad>
+                    </div>
+                </div>
             </tab>
+            
             <tab heading="Inspección" (selectTab)="onSelectTab($event)"> 
                 <app-inspeccion [preconversionForm]="preconversionForm" [staticTabs]="staticTabs"></app-inspeccion>
             </tab>
@@ -46,34 +62,5 @@
             </tab>
         </tabset>
         
-        <div style="padding: 42px; text-align: center;">
-            
-                <button type="submit" class="btn btn-outline-primary">
-                    SIGUIENTE
-                </button>
-            
-        </div>
-
     </form>
 </div>
-
-<!-- <div *ngIf="value === 'Encendido/Inyección'">
-    <div class="row">
-        <div class="col">
-            <h1>Formulario valido</h1>
-            {{ preconversionForm.valid }}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            
-            <h1>Formulario errores></h1>
-            {{ preconversionForm.controls?.monoxidocarbono?.errors | json  }}
-        </div>
-    </div>
-    <div >
-        <h1>Formulario 866-700</h1>
-        <pre>{{ preconversionForm.value | json}}</pre>
-    </div>
-</div> -->
-

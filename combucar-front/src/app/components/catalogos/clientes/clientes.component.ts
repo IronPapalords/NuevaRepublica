@@ -9,12 +9,14 @@ import Swal from 'sweetalert2';
 })
 export class ClientesComponent implements OnInit {
 
+  titulo = 'Alta de Clientes';
+
   clientesForm: FormGroup = this.fb.group({
-    nombre:         ['', Validators.required, Validators.maxLength(150)],
-    rfc:            ['', Validators.required, Validators.maxLength(45)],
-    identificacion: ['', Validators.required, Validators.maxLength(45)],
-    telefono:       ['', Validators.required, Validators.maxLength(45)],
-    correo:         ['', Validators.required, Validators.maxLength(45)]
+    nombre:         ['', Validators.required ],
+    rfc:            ['', Validators.required ],
+    identificacion: ['', Validators.required ],
+    telefono:       ['', Validators.required ],
+    correo:         ['', Validators.required ]
   });
 
   clientes : Cliente[] = [

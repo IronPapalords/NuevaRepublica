@@ -14,10 +14,8 @@ export class NavbarComponent {
 
   constructor( private router: Router){}
 
-  toggleMenu( ) {
-  
-    this.toogleMenu = !this.toogleMenu;
-    console.log('abierto menu',this.toogleMenu );
+  toggleMenu() {
+    this.toogleMenu = !this.toogleMenu;    
     this.newToggle.emit( this.toogleMenu );
   }
 

@@ -1,68 +1,69 @@
-<hr>
-<h4>Alta de Clientes </h4>
-<hr>
+<app-title [titulo]="titulo"></app-title>
 
 <form (ngSubmit)="guardar()" [formGroup]="clientesForm"> 
 
-    <div>
 
         <div class="form-group row">
             <label class="col-2 col-form-label">Nombre</label>
             <div class="col-8">
-                <input class="form-control" type="text" placeholder="Nombre" formControlName="nombre" [class.is-invalid]="clientesForm.controls.errors">
-                <small class="text-danger" *ngIf="campoEsValido('nombre')">Ingrese el nombre del Cliente</small>
+                <!-- <input class="form-control" type="text" placeholder="Nombre" formControlName="nombre"> -->
+                <app-input [parent]="clientesForm" nameInput="nombre" placeholder="Nombre"></app-input>
             </div>
         </div>
 
         <div class="form-group row">
             <label class="col-2 col-form-label">RFC</label>
             <div class="col-8">
-                <input class="form-control" type="text" placeholder="RFC" formControlName="rfc" [class.is-invalid]="clientesForm.controls.errors">
-                <small class="text-danger" *ngIf="campoEsValido('rfc')">Ingrese el RFC del Cliente con el formato correcto</small>
+                <!-- <input class="form-control" type="text" placeholder="RFC" formControlName="rfc" [class.is-invalid]="clientesForm.controls.errors">
+                <small class="text-danger" *ngIf="campoEsValido('rfc')">Ingrese el RFC del Cliente con el formato correcto</small> -->
+                <app-input [parent]="clientesForm" nameInput="rfc" placeholder="RFC"></app-input>
             </div>
         </div>
 
         <div class="form-group row">
             <label class="col-2 col-form-label">Identificacion</label>
             <div class="col-8">
-                <input class="form-control" type="text" placeholder="Identificación" formControlName="identificacion" [class.is-invalid]="clientesForm.controls.errors">
-                <small class="text-danger" *ngIf="campoEsValido('identificacion')">Ingrese el número de identificación del Cliente</small>
+                <app-input [parent]="clientesForm" nameInput="identificacion" placeholder="Identificación"></app-input>
+                <!-- <input class="form-control" type="text" placeholder="Identificación" formControlName="identificacion" [class.is-invalid]="clientesForm.controls.errors">
+                <small class="text-danger" *ngIf="campoEsValido('identificacion')">Ingrese el número de identificación del Cliente</small> -->
             </div>
         </div>
 
         <div class="form-group row">
             <label class="col-2 col-form-label">Teléfono</label>
             <div class="col-8">
-                <input class="form-control" type="text" placeholder="Telefono" formControlName="telefono" [class.is-invalid]="clientesForm.controls.errors">
-                <small class="text-danger" *ngIf="campoEsValido('telefono')">Ingrese el teléfono del Cliente</small>
+                <app-input [parent]="clientesForm" nameInput="telefono" placeholder="Teléfono"></app-input>
+                <!-- <input class="form-control" type="text" placeholder="Telefono" formControlName="telefono" [class.is-invalid]="clientesForm.controls.errors">
+                <small class="text-danger" *ngIf="campoEsValido('telefono')">Ingrese el teléfono del Cliente</small> -->
             </div>
         </div>
 
         <div class="form-group row">
             <label class="col-2 col-form-label">Correo</label>
             <div class="col-8">
-                <input class="form-control" type="text" placeholder="correo@example.com" formControlName="correo" [class.is-invalid]="clientesForm.controls.errors">
-                <small class="text-danger" *ngIf="campoEsValido('correo')">Ingrese el correo del Cliente</small>
+                <app-input [parent]="clientesForm" nameInput="correo" placeholder="correo@example.com"></app-input>
+                <!-- <input class="form-control" type="text" placeholder="correo@example.com" formControlName="correo" [class.is-invalid]="clientesForm.controls.errors">
+                <small class="text-danger" *ngIf="campoEsValido('correo')">Ingrese el correo del Cliente</small> -->
             </div>
         </div>
 
-    </div>
 
     <div class="form-group row">
         <label class="col-2 col-form-label">&nbsp;</label>
         <div class="input-group col-md-8">
-            <button type="submit" class="btn btn-outline-primary btn-block">
+            <!-- <button type="submit" class="btn btn-outline-primary btn-block">
                 Guardar
-            </button>
+            </button> -->
+            <app-button [parent]="clientesForm" type="submit" desc="Guardar" estilo="my-3" [isDisabled]="clientesForm.invalid"></app-button>
         </div>
     </div>
 
 </form>
 
+
 <hr>
 
 <div class="container mt-5 mb-5">
-
     <div class="row border-bottom border-dark fw-bold">
         <div class="col-1">#</div>
         <div class="col">Cliente</div>

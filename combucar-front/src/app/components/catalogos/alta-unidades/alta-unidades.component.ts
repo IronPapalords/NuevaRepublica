@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 
-
-
 @Component({
   selector: 'app-alta-unidades',
   templateUrl: './alta-unidades.component.html',
@@ -11,9 +9,11 @@ import Swal from 'sweetalert2';
 })
 export class AltaUnidadesComponent implements OnInit {
 
+  titulo: string = 'ALTA DE UNIDADES';
+
   unidadForm: FormGroup = this.fb.group({
     cliente:[''],
-    serie: ['', Validators.required, Validators.maxLength(45)],
+    serie: ['', Validators.required],
     marca: ['', Validators.required],
     placas: ['', Validators.required],
     tipo: [''],

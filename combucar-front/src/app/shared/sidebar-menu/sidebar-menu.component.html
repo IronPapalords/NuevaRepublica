@@ -22,7 +22,7 @@
                 <i class="bi bi-ui-checks" style="font-size: 1.5rem; color: white;"></i>
                 <span class="px-2 subseccion">PROCESOS</span>
             </div>
-            <ul class="list-group">
+            <ul class="list-group" (click)="toggleMenu()">
                 <li *ngFor="let item of formatosMenu" class="list-group-item border-0 menuitem" [routerLink]="item.ruta" routerLinkActive="active">
                     {{ item.texto }}
                 </li>

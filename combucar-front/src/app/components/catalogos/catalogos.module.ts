@@ -6,6 +6,7 @@ import { AltaUnidadesComponent } from './alta-unidades/alta-unidades.component';
 import { OperadoresComponent } from './operadores/operadores.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HelpersModule } from 'src/app/helpers/helpers.module';
 
 @NgModule({
   declarations: [
@@ -13,11 +14,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ClientesComponent, 
     AltaUnidadesComponent
   ],
+  exports: [
+    ClientesComponent,
+    AltaUnidadesComponent
+  ],
   imports: [
     CommonModule,
     CatalogosRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HelpersModule
   ]
 })
 export class CatalogosModule { }

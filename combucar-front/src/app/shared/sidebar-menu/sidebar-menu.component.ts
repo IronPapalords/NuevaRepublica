@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 interface MenuItem  {
   texto: string,
@@ -14,6 +14,12 @@ interface MenuItem  {
 export class SidebarMenuComponent  {
 
   @Input() toogleMenu!: boolean;
+  @Output() newToggle:EventEmitter<boolean> = new EventEmitter<boolean>();
+    
+  toggleMenu() {  
+    this.toogleMenu = false;
+    this.newToggle.emit( this.toogleMenu );
+  }
 
   dashboardMenu: MenuItem[] = [
     {

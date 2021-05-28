@@ -19,11 +19,7 @@ export class LoginComponent {
                private router: Router ) { }
 
   login() {
-    console.log(this.loginForm.value);
-    console.log(this.loginForm.valid);
-
     this.router.navigateByUrl('/home/inicio');
-
   }
 
 }

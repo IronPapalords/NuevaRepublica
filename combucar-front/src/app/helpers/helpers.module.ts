@@ -6,19 +6,25 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { InputComponent } from './input/input.component';
 import { DatetimeComponent } from './datetime/datetime.component';
 import { RadioComponent } from './radio/radio.component';
+import { ButtonComponent } from './button/button.component';
+import { SwitchComponent } from './switch/switch.component';
 
 @NgModule({
   declarations: [
     TitleComponent,
     InputComponent,
     DatetimeComponent,
-    RadioComponent
+    RadioComponent,
+    ButtonComponent,
+    SwitchComponent
   ],
   exports: [
     TitleComponent,
     InputComponent,
     DatetimeComponent,
-    RadioComponent
+    RadioComponent,
+    ButtonComponent,
+    SwitchComponent
   ],
   imports: [
     CommonModule,

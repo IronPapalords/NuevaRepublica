@@ -2,22 +2,55 @@
 @import 'mixins';
 @import 'fonts';
 @import 'menu';
-@import 'login';
 
 /* You can add global styles to this file, and also import other style files */
 
 body {
     font-family: Karla;
+    color: $color-white;
 }
 a {
     text-decoration: none;
 }
 
+.gradiente {
+    @include gradienteBackground;
+}
+
+.box {
+    @include shadow;
+    border-radius: 10px;    
+    border: 1px solid $color-gradienteinicio;
+    color: $color-grey;
+    width: 400px;
+    z-index: 2;
+}
+
+.centerDiv {
+    @include centerdiv;
+}
+
+.justify-between {
+    @include justify-between;
+}
+
+/* TITULO */
 .titleCombucar {
-    font-size: 21px;
-    font-family: Karla, sans-serif;
+    font-size: 21px;    
     font-weight: bold;
-    color: white;
+    color: $color-white;
+}
+
+.titleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 2px 1px 21px 1px;
+}
+
+.titulo {
+    font-size: 3vw;
+    font-weight: bold;
 }
 
 .wrapper{
@@ -36,27 +69,76 @@ a {
     transition: margin-left .3s ease-in-out,left .3s ease-in-out,margin-right .3s ease-in-out,right .3s ease-in-out;
 }
 
-.fondo {
-  background-color: $color-whitelight;
-}
-
-.profile {
-    background: $color-white;
-    margin-inline: auto;
-    color: $color-blue-profile;
-    min-width: 100px;
-    padding: 1.5rem 1rem 1rem;
-    text-align: center;
-    width: 200px;
-}
-
-
-
-.marginx {    
-    padding-left: 0px;
-    padding-right: 0px;
+.formBlack {
+    color: $color-black;
 }
 
 .margenr{
     padding-left: 0px;
 }
+
+.circleButton {
+    width: 50px;
+    height: 50px;
+    padding: 7px 10px;
+    border-radius: 25px;
+    font-size: 10px;
+    text-align: center;
+}
+
+/* LOGIN */
+.login {
+    @include centerdiv;
+    @include gradienteBackground;
+    height: 100vh;
+    width: 100vw;    
+}
+
+.login:after {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    z-index: 111;
+}
+
+/* PRECONVERSION */
+.preconversionContainer {
+    background-color: $color-white;
+    padding: 42px 42px 0px 42px;
+}
+
+/* ICONS */
+.iconContainer {
+    align-items: center; 
+    color:$color-white;
+    opacity: 70%; 
+    text-align: center;
+}
+
+.darker {
+    background: linear-gradient(to bottom right, $color-gradienteinicio2, $color-gradienteinicio);
+    color:$color-white;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;                    
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+.iconBlue {
+    color: $color-cornflowerblue;
+    font-size: 1.2rem; 
+}
+
+.iconGreen {
+    color: $color-green;
+    font-size: 1.2rem; 
+}
+
+.rem5 {
+    font-size: 5rem; 
+}
+
+.rem3-5 {
+    font-size: 3.5rem; 
+}
+

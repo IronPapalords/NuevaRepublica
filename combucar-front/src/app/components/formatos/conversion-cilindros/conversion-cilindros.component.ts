@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConversionCilindrosComponent implements OnInit {
 
+  titulo: string = 'Conversion Cilindros';
   constructor() { }
 
   ngOnInit(): void {

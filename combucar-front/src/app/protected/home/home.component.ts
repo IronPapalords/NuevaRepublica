@@ -8,19 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  title = 'combucar-front';
+  toogleMenu: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-
-  toogleMenu: boolean = false;
-
   getToggleValue( newToggle: boolean ) {
-    console.log({newToggle});
     this.toogleMenu = newToggle;
   }
-
-  title = 'combucar-front';
-
 }
