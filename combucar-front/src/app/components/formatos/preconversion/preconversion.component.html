@@ -31,17 +31,14 @@
                 
                 <div class="row  centerDiv text-center">
                     <div class="col-6">
-                        <app-button type="icon" desc="Cliente" estilo="bi-ui-checks iconBlue rem5" (onClick)="showCliente($event)" [isDisabled]="false">
-                        </app-button>
+                        <app-button type="icon" desc="Cliente" estilo="bi-ui-checks iconBlue rem5" (onClick)="showCliente($event)" [isDisabled]="false"></app-button>
                     </div>
                     <div class="col-6">
-                        <app-button type="icon" desc="Unidad" estilo="bi-arrow-left-right iconBlue rem5" (onClick)="showUnidad($event)" [isDisabled]="false">
-                        </app-button>
+                        <app-button type="icon" desc="Unidad" estilo="bi-arrow-left-right iconBlue rem5" (onClick)="showUnidad($event)" [isDisabled]="false"></app-button>
                     </div>
                 </div>
 
                 <div class="my-3">
-
                     <div *ngIf="toggleCliente">
                         <app-cliente [preconversionForm]="preconversionForm" [staticTabs]="staticTabs"></app-cliente>
                     </div>

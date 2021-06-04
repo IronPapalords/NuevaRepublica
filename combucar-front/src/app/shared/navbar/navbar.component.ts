@@ -14,12 +14,12 @@ export class NavbarComponent {
 
   constructor( private router: Router){}
 
-  toggleMenu() {
+  toggleMenu(event:any) {
     this.toogleMenu = !this.toogleMenu;    
     this.newToggle.emit( this.toogleMenu );
   }
 
-  logout() {
+  logout(event: any) {
     this.router.navigateByUrl('/auth');
   }
 

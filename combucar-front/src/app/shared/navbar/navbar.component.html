@@ -5,9 +5,10 @@
     <div class="col-12">
       <nav class="navbar navbar-expand w-100">
         <!-- ICONO HAMBURGRUESA -->
-        <button (click)="toggleMenu()" class="btn btn-primary">
+        <!-- <button (click)="toggleMenu($event)" class="btn btn-primary">
           <i class="bi bi-list"></i>
-        </button>
+        </button> -->
+        <app-button type="icon" desc="" estilo="bi-list btn-primary hamburger rem1" (onClick)="toggleMenu($event)" [isDisabled]="false"></app-button>
         
         <a routerLink="/home/inicio">
           <img src="assets/brand/combucar.png" alt="" width="160" height="90" style="margin: 12px;" class="d-inline-block align-text-top">        
@@ -34,18 +35,14 @@
           </div>
 
         </div>
-
-        
-
-        
-
-
         
         <!-- LOGOUT -->
         <div class="navbar-collapse collapse justify-content-end">
-          <button class="btn btn-danger" (click)="logout()">
+          <app-button type="icon" desc="" estilo="bi-box-arrow-right iconLogout btn-danger rem1" (onClick)="logout($event)" [isDisabled]="false"></app-button>
+
+          <!-- <button class="btn btn-danger" (click)="logout()">
             <i class="bi bi-box-arrow-right"></i>
-          </button>
+          </button> -->
         </div>
         
       </nav>

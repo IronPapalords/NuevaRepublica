@@ -1,7 +1,11 @@
-
 @mixin centerdiv {
     display: flex;
     justify-content: center;
+    align-items: center;    
+}
+
+@mixin alignItemCenter {
+    display: flex;
     align-items: center;    
 }
 
@@ -18,4 +22,9 @@
 @mixin justify-between {
     display: flex;
     justify-content: space-between;
+}
+
+@mixin iconSize {
+    border-radius: 4px;
+    padding: 10px 12px 10px 12px;
 }

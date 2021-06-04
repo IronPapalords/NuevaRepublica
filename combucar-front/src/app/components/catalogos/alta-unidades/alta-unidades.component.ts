@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-alta-unidades',
   templateUrl: './alta-unidades.component.html',
-  styleUrls: ['./alta-unidades.component.css']
+  styleUrls: []
 })
 export class AltaUnidadesComponent implements OnInit {
 

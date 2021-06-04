@@ -2,8 +2,10 @@
 @import 'mixins';
 @import 'fonts';
 @import 'menu';
-
-/* You can add global styles to this file, and also import other style files */
+@import '~@swimlane/ngx-datatable/index.css';
+@import '~@swimlane/ngx-datatable/themes/bootstrap.scss';
+@import '~@swimlane/ngx-datatable/themes/material.scss';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
 
 body {
     font-family: Karla;
@@ -124,6 +126,11 @@ a {
     padding-bottom: 2em;
 }
 
+.iconWhite {
+    color: $color-white;
+    font-size: 1.5rem; 
+}
+
 .iconBlue {
     color: $color-cornflowerblue;
     font-size: 1.2rem; 
@@ -134,11 +141,25 @@ a {
     font-size: 1.2rem; 
 }
 
-.rem5 {
-    font-size: 5rem; 
+.hamburger {
+    @include iconSize;
 }
 
+.iconLogout {
+    color: $color-white;
+    @include iconSize;
+}
+
+.rem1 {
+    font-size: 1rem; 
+}
+.rem2 {
+    font-size: 2rem; 
+}
 .rem3-5 {
     font-size: 3.5rem; 
 }
 
+.rem5 {
+    font-size: 5rem; 
+}

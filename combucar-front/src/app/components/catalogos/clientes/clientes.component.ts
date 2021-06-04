@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-clientes',
   templateUrl: './clientes.component.html',
-  styleUrls: ['./clientes.component.css']
+  styleUrls: []
 })
 export class ClientesComponent implements OnInit {
 
@@ -33,7 +33,91 @@ export class ClientesComponent implements OnInit {
       identificacion: '234567890',
       telefono: '55 3333 3333',
       correo: 'jonathan@combucar.com',
-    }
+    },
+    {
+      nombre: 'Alejandra Medellin',
+      rfc: 'RFC000202EFG',
+      identificacion: '736434834',
+      telefono: '55 1111 2222',
+      correo: 'aleMedellin@combucar.com',
+    },
+    {
+      nombre: 'Oscar Hernández',
+      rfc: 'RFC000202CDV',
+      identificacion: '12345678',
+      telefono: '55 5555 3333',
+      correo: 'dobok1@gmail.com',
+    },
+    {
+      nombre: 'Juan Rambo',
+      rfc: 'RFC000202CDV',
+      identificacion: '234567890',
+      telefono: '55 2222 3333',
+      correo: 'juanRambo@combucar.com',
+    },
+    {
+      nombre: 'Alma maria rico',
+      rfc: 'MARI00020298M7',
+      identificacion: '908293084908',
+      telefono: '55 2222 0011',
+      correo: 'mariarico@combucar.com',
+    },
+    {
+      nombre: 'Pito Perez',
+      rfc: 'PIPE00020298M7',
+      identificacion: '5675673434',
+      telefono: '55 0998 4511',
+      correo: 'pipe@hotmail.com',
+    },
+    {
+      nombre: 'Benito lopez caras',
+      rfc: 'NELOCA00020298M7',
+      identificacion: '6789345345',
+      telefono: '55 6677 9451',
+      correo: 'miBeni@outlook.com',
+    },
+    {
+      nombre: 'Benito lopez caras',
+      rfc: 'NELOCA00020298M7',
+      identificacion: '6789345345',
+      telefono: '55 6677 9451',
+      correo: 'miBeni@outlook.com',
+    },
+    {
+      nombre: 'Benito lopez caras',
+      rfc: 'NELOCA00020298M7',
+      identificacion: '6789345345',
+      telefono: '55 6677 9451',
+      correo: 'miBeni@outlook.com',
+    },
+    {
+      nombre: 'Benito lopez caras',
+      rfc: 'NELOCA00020298M7',
+      identificacion: '6789345345',
+      telefono: '55 6677 9451',
+      correo: 'miBeni@outlook.com',
+    },
+    {
+      nombre: 'Benito lopez caras',
+      rfc: 'NELOCA00020298M7',
+      identificacion: '6789345345',
+      telefono: '55 6677 9451',
+      correo: 'miBeni@outlook.com',
+    },
+    {
+      nombre: 'Benito lopez caras',
+      rfc: 'NELOCA00020298M7',
+      identificacion: '6789345345',
+      telefono: '55 6677 9451',
+      correo: 'miBeni@outlook.com',
+    },
+    {
+      nombre: 'Benito lopez caras',
+      rfc: 'NELOCA00020298M7',
+      identificacion: '6789345345',
+      telefono: '55 6677 9451',
+      correo: 'miBeni@outlook.com',
+    },
   ];
 
   constructor(private fb: FormBuilder) { }

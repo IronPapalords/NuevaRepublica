@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormatosModule } from '../components/formatos/formatos.module';
+import { HelpersModule } from '../helpers/helpers.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FormatosModule } from '../components/formatos/formatos.module';
   imports: [
     CommonModule,
     RouterModule,
-    ProtectedRoutingModule
+    ProtectedRoutingModule,
+    HelpersModule
   ]
 })
 export class SharedModule { }

@@ -14,14 +14,14 @@
     z-index: 1;
 }
 
-@media (min-width: 1px) and (max-width: 991.98px){
+/* @media (min-width: 1px) and (max-width: 991.98px){
     .sidebar {
         margin-left: -250px;
     }
     .sidebar.toggle {
         margin-left: 0;
     }
-}
+} */
 
 .secciones {
     background: transparent;
@@ -45,7 +45,6 @@ li.menu {
 }
 
 .navbarProps {
-    /*background-color: $color-blue;*/
     background-color: transparent;
 }
 
@@ -61,4 +60,9 @@ li.menu {
 .toggle {
     display: block;
     margin-left: -250px;
+}
+
+.leftMenuTitle {
+    @include alignItemCenter;
+    color: $color-grey;
 }
